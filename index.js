@@ -23,6 +23,7 @@ const client = new MongoClient(uri, {
 async function run() {
   const placesCollection = client.db("travel-agency").collection("places");
   const reviewsCollection = client.db("travel-agency").collection("reviews");
+  const tourguide = require('./Packages/Packages.json')
   try {
     app.get("/places", async (req, res) => {
       const query = {};
@@ -46,6 +47,11 @@ async function run() {
       res.send(reviews);
       // console.log(reviews);
     });
+
+    app.get('/tourguide', (req,res)=> {
+      res.send(tourguide)
+      console.log(tourguide);
+    })
   } finally {
   }
 }
