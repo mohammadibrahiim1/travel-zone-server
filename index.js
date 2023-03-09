@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
+// const ObjectId = require('mongodb').ObjectId;
 
 // user: user2
 // password:0kw4llp4OEF6BZGQ
@@ -23,8 +24,10 @@ const client = new MongoClient(uri, {
 async function run() {
   const placesCollection = client.db("travel-agency").collection("places");
   const reviewsCollection = client.db("travel-agency").collection("reviews");
-  const tourGuideCollection = client.db("travel-agency").collection("tourGuide");
-  const tourguide = require('./Packages/Packages.json');
+  const tourGuideCollection = client
+    .db("travel-agency")
+    .collection("tourGuide");
+  // const tourguide = require('./Packages/Packages.json');
   try {
     app.get("/places", async (req, res) => {
       const query = {};
@@ -49,23 +52,20 @@ async function run() {
       // console.log(reviews);
     });
 
-    app.get('/tourGuide', async (req,res)=> {
+    app.get("/tourGuide", async (req, res) => {
       const query = {};
-      const tourGuide = await tourGuideCollection.find(query).toArray()
+      const tourGuide = await tourGuideCollection.find(query).toArray();
       res.send(tourGuide);
       console.log(tourGuide);
     });
 
-    app.get('/tourGuide/:id', async (req,res)=> {
+    app.get("/tourGuide/:id", async (req, res) => {
       const id = req.params.id;
-      const query = {_id: 'new ObjectId(id)'};
-      const guideDetails = await tourGuideCollection.findOne(query)
+      const query = { _id: new ObjectId(), ...id };
+      const guideDetails = await tourGuideCollection.findOne(query);
       res.send(guideDetails);
       console.log(guideDetails);
     });
-
-
-
   } finally {
   }
 }
