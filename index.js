@@ -24,9 +24,7 @@ const client = new MongoClient(uri, {
 async function run() {
   const placesCollection = client.db("travel-agency").collection("places");
   const reviewsCollection = client.db("travel-agency").collection("reviews");
-  const tourGuideCollection = client
-    .db("travel-agency")
-    .collection("tourGuide");
+  const tourGuideCollection = client.db("travel-agency").collection("tourGuide");
   // const tourguide = require('./Packages/Packages.json');
   try {
     app.get("/places", async (req, res) => {
@@ -56,16 +54,19 @@ async function run() {
       const query = {};
       const tourGuide = await tourGuideCollection.find(query).toArray();
       res.send(tourGuide);
-      console.log(tourGuide);
+      // console.log(tourGuide);
     });
 
-    app.get("/tourGuide/:id", async (req, res) => {
-      const id = req.params.id;
-      const query = { _id: new ObjectId(), ...id };
-      const guideDetails = await tourGuideCollection.findOne(query);
-      res.send(guideDetails);
-      console.log(guideDetails);
-    });
+    // get guide by id
+    
+   app.get("/tourGuide/:id", async (req,res)=> {
+    const id = req.params.id;
+    const query = { _id: new ObjectId(id)}
+    const guideDetails = await tourGuideCollection.findOne(query);
+    res.send(guideDetails);
+    console.log(guideDetails);
+   })
+   
   } finally {
   }
 }
