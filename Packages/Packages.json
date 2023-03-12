@@ -1,178 +1,631 @@
 [
   {
-    "name": "Adam",
-    "image": "https://i.ibb.co/KjJC610/sydney-guide-img.jpg",
-    "rate": "$25/h",
-    "location": "Sydney,Australia",
-    "language": " Fluent English and Egyptian. Fully understand western and Egyptian",
-    "replay-rate": "96%", 
-      "ratings": "4.5",
-    "replay-within": "1 hours",
-    "languages": "English, Egypt",
-    "activityOne": "pickup & driving tours",
-    "activityTwo": "translation & interpretation",
-    "activityThree": "Food & Resturants",
-    "activityFour": "History & Culture",
-    "activityFive": "Exploration & Sightseeing",
-    "activitySix": "Shopping",
-    "quote": " Learn & travel.enhance your knowledge",
-    "about": " I am a Radiation Therapist at Liverpool Cancer Therapy Center in Sydney Australia.",
-    "place": "I live in the Blue Mountains. I am happily showing you the hiking tracks, bike tracks, beautiful scenarios, cafes, bars and restaurants or I can take you to famous Coogee to Bondi walk."
+    "overview": "Discover Real Moments and True Experiences in San Antonio and find something for everyone! Discover Real Moments and True Fun. From family adventures to the River Walk & more. Theme Parks. Rich History. Provide hand sanitizer. Live Music. Get Free Visitor's Guide. Food & Wine Festivals.Discover Real Moments and True Experiences in San Antonio and find something for everyone! Discover Real Moments and True Fun. From family adventures to the River Walk & more. Theme Parks. Rich History. Provide hand sanitizer. Live Music. Get Free Visitor's Guide. Food & Wine Festivals.",
+    "img": "https://i.ibb.co/k19N8v4/paris.jpg",
+    "age": 29,
+    "code": 24531,
+    "stay": "3days,2Nights",
+    "journey": "Dhaka-Paris-Dhaka",
+    "ratings": "5",
+    "name": "Paris-All stunning place",
+    "price": "$271/person",
+    "place-img": {
+      "img-1": "https://i.ibb.co/jDppvyj/paris-img-01.jpg",
+      "img-2": "https://i.ibb.co/BG9BNPv/paris-img-02.jpg",
+      "img-3": "https://i.ibb.co/5x9Cvfw/paris-img-03.jpg"
+    },
+    "itinerary": {
+      "firstDay": "paris-Reimis-Luxembourg",
+      "secondDay": "Luxembourg-Trier-Koblenz-Frankfurt",
+      "thirdDay": "Frankfurt-Bonn-cologn-Amsterdam"
+    },
+    "cancellationPolicy": {
+      "one": "18 days and more prior to departure date:  10% of tour price 17 -10days prior to departure date: 50% of tour price9 days and less prior to departure date: 100% of tour price",
+      "two": "Please prepare enough Euros. You are recommended to exchange the Euros 1-2 weeks before the departure date at your local bank. It is not that convenient and cost-efficient for the exchange at destincation's ATMs, airports or railway stations due to the exchange rate."
+    },
+    "pricingInfo": {
+      "one": " Price for Single Occupancy applies when one person stays in one standard hotel room.",
+      "two": "Price for Double Occupancy applies when two people stay in one standard hotel room.",
+      "three": " Price for Child applies when child of 2-11 years stays as the 3rd person in one standard hotel room.",
+      "four": " Children younger than 2 years of age travel for free, provided they do not occupy a seat on the bus, or a bed in the room.",
+      "five": " Tour prices are based on Euros (EUR) and converted into US dollars (USD). Constant fluctuations in the exchange rate cause prices to change on a regular basis. You will be charged the price based on the applicable exchange rate at the time of payment. All transactions are final. We do not offer discounts or compensation to those citing lower prices at a later date. Bookings will be"
+    },
+    "reservationInfo": {
+      "one": "Immediately after submitting your reservation you will receive a Receipt of Reservation via email.",
+      "two": "Within one to two business days of submitting your reservation you will receive a confirmation email from us. If you need to book an airline ticket, we recommend that you do so after you receive a confirmation of your tour reservation from us.",
+      "three": " An E-Ticket will be sent to you via email as soon as details of your reservation are confirmed or your supporting information is received by us. We will provide you with all detailed information about your tour on the E-Ticket. Contact information for local tour provider will be included on E-Ticket for your convenience or re-confirmation purpose if re-confirmation is required.",
+      "four": " Simply print your E-Ticket and present it with your valid photo ID on the day of your activity to your tour guide. Please remember E-Ticket is your proof of purchase."
+    },
+    "termsAndCondition": [
+      {
+        "one": "Your purchase does not guarantee confirmation. Your purchase will initiate a reservation process. We will confirm with you via email within one to two business days."
+      },
+      {
+        "two": "Prices may vary due to availability. We reserve the right to make price adjustment without prior notice."
+      },
+      {
+        "three": " Please refer to our Standard Amendment, Cancellation and Refund Policy before you make reservation."
+      },
+      {
+        "four": " Please refer to Customer Agreement before you make reservation."
+      },
+      {
+        "five": " For refunds processed by credit card or paypal, there will be a 6% transaction fee that will be deducted from the overall refund amount. The refund amount can also be credited directly to your account for future bookings without any transaction fee."
+      },
+      {
+        "six": "  Local tour provider reserves the right to make modifications to tour arrangements including order of tour activities, hotel and its location if deemed necessary."
+      }
+    ],
+    "includes": [
+      {
+        "one": "2-night hotel accommodations"
+      },
+      { "two": "Breakfast (coffee or tea, juice and bread)" },
+      { "three": "Ground transportation in air-conditioned motorcoach" },
+      { "four": "Professional tour guide" }
+    ],
+    "excludes": [
+      {
+        "one": "Airfare"
+      },
+      { "two": "Airport pick-up, drop-off" },
+      { "three": "Mandatory Service Fee - EUR 7.00 per day, per" },
+      { "four": "All personal expenses and additional hotel services" },
+      { "five": "Lunch and dinner" }
+    ]
   },
   {
-    "name": "Cansu",
-    "image": "https://i.ibb.co/Wpx1PFT/turkey-guide-img.jpg",
-    "rate": "$25/h",
-    "location": "Istanbul,Turkey",
-    "quote": "Learn & travel",
-    "replay-rate": "100%",
-    "ratings": "4.5",
-    "replay-within": "3 hours",
-    "languages": "English, French",
-    "activityOne": "pickup & driving tours",
-    "activityTwo": "translation & interpretaion",
-    "activityThree": "Food & Resturants",
-    "activityFour": "History & Culture",
-    "activityFive": "Exploration & Sightseeing",
-    "about": "I studied sociology at Galatasaray University (one of the best universities of Turkey) and did my master degree on Political Studies at EHESS in Paris. I am a really Istanbul lover and know most popular, more historical and each hidden parts of the city",
-    "place": "As an old Istanbul citizeb, appreciate discovering non-touristic neighborhood and also the most historical parts of Istanbul up to your preferences and your interests"
-  },
-  {
-    "name": "Leyla",
-    "image": "https://i.ibb.co/hLCjbJ3/baku-tour-guide.jpg",
-    "rate": "$12/h",
-    "location": "Baku,Azerbaijan",
-    "quote": "Let explore baku with me",
-    "replay-rate": "80%",
-    "ratings": "4.5",
-    "replay-within": "2 hours",
-    "languages": "English",
-    "activityOne": "pickup & driving tours",
-    "activityTwo": "translation & interpretaion",
-    "activityThree": "Food & Resturants",
-    "activityFour": "History & Culture",
-    "activityFive": "Exploration & Sightseeing",
-    "activitySix": "Shopping",
-    "about": "I am from Azerbaijan. How can I help you?",
-    "place": "I will show you Baku and other places of our country."
-  },
-  {
-    "name": "khalid",
-    "image": "https://i.ibb.co/HrXpKHY/dubai-guide-img.jpg",
-    "rate": "Free",
-    "location": "Dubai,United Arab Emirates",
-    "quote": " Your Welcome",
-    "replay-rate": "76%",
-    "ratings": "4.5",
-    "replay-within": "3 hours",
-    "languages": "English",
-    "activityOne": "pickup & driving tours",
-    "activityTwo": "translation & interpretaion",
-    "activityThree": "Food & Resturants",
-    "activityFour": "History & Culture",
-    "activityFive": "Exploration & Sightseeing",
-    "activitySix": "Shopping",
-    "about": "Enjoying trip, traveling",
-    "place": "Important things in my city"
-  },
-  {
-    "name": "Thuhu",
-    "image": "https://i.ibb.co/q9BcZyx/maldives-tour-guide.jpg",
-    "rate": "$10/h",
-    "location": "Male,Maldives",
-    "quote": " A girl in love with the Ocean! Lets go look around!",
-    "replay-rate": "94%",
-    "ratings": "4.5",
-    "replay-within": "3 hours",
-    "languages": "English",
-    "activityOne": "pickup & driving tours",
-    "activityTwo": "translation & interpretaion",
-    "activityThree": "Food & Resturants",
-    "activityFour": "History & Culture",
-    "activityFive": "Exploration & Sightseeing",
-    "activitySix": "Shopping",
-    "about": "Hey all! If you're in the Maldives and want to see around let me know! I'm a certified scuba diver and I love the ocean. if its the under water beauty you are here for, or just want to look around and walk on the white sandy beaches, I'm your girl! :D",
-    "place": "I'll show you all the local sites, the beautiful white sandy beaches and take you snorkeling in the beautiful reefs of the Maldives :)"
-  },
-  {
-    "name": "Karolina",
-    "image": "https://i.ibb.co/cLS7jNV/london-tour-guide.jpg",
-    "rate": "$37/h",
-    "location": "London,United Kingdom",
-    "quote": "  Let me prove u London is more than fish&chips; and Big Ben",
-    "replay-rate": "93%",
-    "ratings": "4.5",
-    "replay-within": "4 hours",
-    "languages": "English,Polish",
-    "activityOne": "pickup & driving tours",
-    "activityTwo": "translation & interpretaion",
-    "activityThree": "Food & Resturants",
-    "activityFour": "History & Culture",
-    "activityFive": "Exploration & Sightseeing",
-    "activitySix": "Shopping",
-    "activitySeven": "NightLife & Bars",
-    "about": "Hey there. My name is Karolina and im originally from Poland, but moved to London for studies and work in 2020. I work as photographer and model but im happy to show u around this beautiful city which stole my heart when first time I visited! Feel free to check my instagram @rosedamex",
-    "place": "Im very open minded to what u want to explore and how to spend the time, so feel free to give me any suggestions! We can go either sightsee some of the London landmarks together or go for some events} nightlife etc Im also happy to take some pictures of you as i work as a photographer. If u saw a bit of London already} lets explore hidden SpeakEasy spots and places around London ! Everything is to negotiate!"
-  },
-  {
-    "name": "Nobu",
-    "image": "https://i.ibb.co/hmHBjjx/tokyo-tour-guide.jpg",
-    "rate": "Free",
-    "location": "Tokyo,Japan",
-    "quote": "Tokyo is an awesome city",
-    "replay-rate": "82%",
-    "ratings": "4.5",
-    "replay-within": "5 hours",
-    "languages": "English,Japnaness,Chinese",
-    "activityOne": "pickup & driving tours",
-    "activityTwo": "translation & interpretaion",
-    "activityThree": "Food & Resturants",
-    "activityFour": "History & Culture",
-    "activityFive": "Exploration & Sightseeing",
-    "activitySix": "Shopping",
-    "activitySeven": "NightLife & Bars",
-    "about": "I’m a Tokyo native who used to live in the US. I love traveling, traditional craftwork, food, and language learning",
-    "place": "Food, sight seeing, city life. Let me know what activityivities you’d like to do or areas you’d like to explore!"
-  },
-  {
-    "name": "Yas",
-    "image": "https://i.ibb.co/Vj8PTQB/france-tour-guide.jpg",
-    "rate": "$43/h",
-    "location": "Paris,France",
-    "quote": "I’m Moroccan enjoying life between Paris and London!",
-    "replay-rate": "85%",
-    "ratings": "4.5",
-    "replay-within": "5 days",
-    "languages": "English,Arabic, French",
-    "activityOne": "pickup & driving tours",
-    "activityTwo": "translation & interpretaion",
-    "activityThree": "Food & Resturants",
-    "activityFour": "History & Culture",
-    "activityFive": "Exploration & Sightseeing",
-    "activitySix": "Shopping",
-    "activitySeven": "NightLife & Bars",
+    "overview": "Explore UNESCO World Heritage Sites,Private Guide",
+    "img": "https://i.ibb.co/ZJWv352/nepal.jpg",
+    "age": 29,
+    "code": 24532,
+    "stay": "1Day",
+    "ratings": "4.9",
+    "name": "Nepal-All stunning place",
+    "price": "$449/person",
+    "journey": "Dhaka-Nepal-Dhaka",
+    "itinerary": [
+      {
+        "firstDay": "paris-Reimis-Luxembourg"
+      },
+      { "secondDay": "Luxembourg-Trier-Koblenz-Frankfurt" },
+      { "thirdDay": "Frankfurt-Bonn-cologn-Amsterdam" }
+    ],
+    "place-img": [
+      {
+        "img-1": "https://i.ibb.co/Jq4twpX/nepal-img-01.jpg"
+      },
+      { "img-2": "https://i.ibb.co/S3y4NL7/nepal-img-02.jpg" },
+      { "img-3": "https://i.ibb.co/fd3Shwj/nepal-img-03.jpg" }
+    ],
 
-    "about": " I’m Moroccan studying in Paris I’ll be more than happy to show you the finest places in the city of love",
-    "place": "I can customize your trip depending on your preference and how do you like to spend your day."
+    "includes": [
+      {
+        "one": " Private Tour"
+      },
+      { "two": "Breakfast (coffee or tea, juice and bread)" },
+      { "three": "Ground transportation in air-conditioned motorcoach" },
+      { "four": "Professional tour guide" },
+      { "five": "Taxes" },
+      { "six": "Water Bottle" },
+      { "seven": "Monument Fees" }
+    ],
+    "excludes": [
+      {
+        "one": " Lunch"
+      },
+      { "two": "Gratuities" }
+    ]
   },
   {
-    "name": "Jackie",
-    "image": "https://i.ibb.co/HrthMnC/newyork-tour-guide.jpg",
-    "rate": "$21/h",
-    "location": "New York,United States",
-    "quote": "Become a real New Yorker with me!",
-    "replay-rate": "88%",
+    "overview": "• Admission to Metro, Zojoji Temple, Meiji Temple, Sensoji Temple , Arakurayama Sengen Park , Village Museum , Toyota Museum , Tenryu-ji Temple, Arashiyama bamboo forest in Kyoto, Fushimi Inari, Imperial Palace, Kinkakuji Temple , Todai-ji Temple and Horyu-ji Temple. , Engyio-ji Temple , Castle , Korakuen Gardens , Itsukushima Temple , Peace Museum in HiroshimaBoat: Kawaguchiko LakeBreakfasts buffet, 3 Lunchs and 3 DinnerCity tour in: TOKYO, KYOTOFerry: Hiroshima - MiyajimaFunicular: Mount ShosaTokyo Airport pick-up service",
+    "img": "https://i.ibb.co/bs0qsPv/japan.jpg",
+    "age": 29,
+    "code": 24533,
+    "stay": "9days,8nights",
+    "ratings": "5",
+    "name": "Japan-All stunning place",
+    "journey": "Dhaka-Tokyo-Hiroshima-Dhaka",
+    "price": "$2529/person",
+    "place-img": {
+      "img-1": "https://i.ibb.co/CwdT1YF/japan-img-01.jpg",
+      "img-2": "https://i.ibb.co/YtwMNs6/tokyo.jpg",
+      "img-3": "https://i.ibb.co/bmHVMq8/hiroshima.jpg"
+    },
+    "itinerary": {
+      "firstDay": "Tokyo",
+      "secondDay": "Tokyo",
+      "thirdDay": "Tokyo-Mount Fuji-Kawaguchiko",
+      "fourthDay": "Kawaguchiko-Toyota-Kyoto",
+      "fifthDay": "Kyoto",
+      "sixthDay": "Kyoto-Osaka",
+      "seventhDay": "Osaka-Okayama",
+      "eightDay": "Okayama-Hiroshima",
+      "ninethDay": "Hiroshima"
+    },
+    "includes": [
+      {
+        "one": "8-night hotel accommodations"
+      },
+      { "two": "Breakfast (coffee or tea, juice and bread)" },
+      { "three": "City tour in: TOKYO, KYOTO" },
+      {
+        "four": "Tokyo Airport pick-up,Breakfast buffet ,Professional English-speaking guide"
+      },
+      { "five": " Boat: Kawaguchiko Lake" },
+      { "six": "Water Bottle" },
+      {
+        "seven": " Metro, Zojoji Temple, Meiji Temple, Sensoji Temple , Arakurayama Sengen Park , Village Museum , Toyota Museum , Tenryu-ji Temple, Arashiyama bamboo forest in Kyoto, Fushimi Inari, Imperial Palace, Kinkakuji Temple , Todai-ji Temple and Horyu-ji Temple. , Engyio-ji Temple , Castle , Korakuen Gardens , Itsukushima Temple , Peace Museum in Hiroshima, Funicular: Mount Shosa"
+      },
+      {
+        "eight": " 3 Lunch Included in: TOKYO, NARA, HIMEJI 3 Dinner included in: TOKYO, KAWAGUCHIKO, HIROSHIMA"
+      }
+    ],
+    "excludes": [
+      {
+        "one": "Airfares or related transportation between your home and departure city"
+      },
+      { "two": "Airport drop-off at the end of the tour" },
+      {
+        "three": "CAll personal expenses including hotel room service and meals; however, you have the option to pay for meals the tour guide arranges"
+      },
+      {
+        "four": " Entrance fees & optional tours (Prices vary from season to season; only the price at the ticket booth / box office is final)"
+      }
+    ],
+
+    "facilities": [
+      "flight facility",
+      "5star hotel",
+      "site seeing",
+      "transport",
+      "Meels",
+      "Room service",
+      "Air condition room"
+    ]
+  },
+  {
+    "overview": "Jammu and Kashmir is the northern-most state of india and shares its borders with Himachal predesh and Punjab and the neighbouring countries of pakistan, China and Afganistan.The state consists of three regions - jammu , the kashmir valley and ladakh.The naural beauty and picturesque locations have made it a favoured destination for tourists across the world.Jammu is famous for its temples, while the kashmir valley is known for its lakes and gardens",
+    "age": 29,
+    "img": "https://i.ibb.co/M9CmYXD/india.jpg",
+    "stay": "5days,4nights",
+    "ratings": "5",
+    "name": "India-Kashmir",
+    "price": "$230/person",
+    "journey": "Dhaka-India-Kashmir-Dhaka",
+    "place-img": {
+      "img-1": "https://i.ibb.co/mBgcX78/kashmir-img-01.jpg",
+      "img-2": "https://i.ibb.co/HnXRKjJ/kashmir-img-02.jpg",
+      "img-3": "https://i.ibb.co/nch1cDn/kashmir-img-03.jpg"
+    },
+
+    "includes": [
+      {
+        "one": "Assistance Upon arrival at Sheikh Ul Alam int. airport "
+      },
+      {
+        "two": "Traditional welcome in the hotel with welcome Drink on arraival"
+      },
+      { "three": "visa assistance" },
+      {
+        "four": "three nights Hotel Accomodation in Srinagar.(one night house boat)"
+      },
+      { "five": "One night hotel accommodation in Pahalgam" },
+      { "six": " Daily Breakfast and dinner at Hotel" },
+      {
+        "seven": " All Transportations & sighseeing tours by non-ac innova  cars"
+      },
+      {
+        "eight": " 90 minutes Boat right(shikara) on world famous dal lake-srinagar"
+      }
+    ],
+    "excludes": [
+      {
+        "one": "internation + domestic air ticket "
+      },
+      { "two": "Visa fee with service charge" },
+      { "three": "Guide fee, Camera fee, any monument entrances" },
+      {
+        "four": "additional costs due to flight cancellation, road blocks etc."
+      },
+      { "five": "any meals other than specified" },
+      {
+        "six": " any expenses of personal nature such as laundry, tips, telephone cost etc"
+      },
+      { "seven": "GST-5%" }
+    ]
+  },
+  {
+    "overview": "Admission to Mosque of Suleiman the Magnificent and Topkapi Palace in Istanbul, Mausoleum of Ataturk in Ankara , Goreme Valley; Valley of Uchisar; Underground city of Kaimacli; Pasabag Valley , Traditional tea in Safranbolu , Gokgol Magarasi cave , Caves and tombs in Eregli , Eydinpinar Waterfalls",
+    "img": "https://i.ibb.co/pdgZZnx/istunbul.jpg",
+    "age": 29,
+    "code": 24535,
+    "stay": "7days,6nights",
+    "journey": "Dhaka-Istunbul-Dhaka",
+    "ratings": "5",
+    "itinerary": {
+      "firstDay": "Istunbul",
+      "secondDay": "Istunbul",
+      "thirdDay": "Istunbul",
+      "fourthDay": "Istanbul - Ankara - Cappadocia",
+      "fifthDay": "Cappadocia",
+      "sixthDay": "Cappadocia - Hacibekta- Ankara - Safranbolu",
+      "seventhDay": "Safranbolu - Gokgol Magarasi - Eregil - Eydinpinar - Istanbul-Dhaka"
+    },
+
+    "name": "turkey-All stunning place",
+    "price": "$482/person",
+    "place-img": {
+      "img-1": "https://i.ibb.co/SJSDhKy/turkey.jpg",
+      "img-2": "https://i.ibb.co/W3q6vj8/turkey-istunbul.jpg",
+      "img-3": "https://i.ibb.co/19W6CpQ/turkey-img.jpg"
+    },
+
+    "facilities": [
+      "flight facility",
+      "5star hotel",
+      "site seeing",
+      "transport",
+      "Meels",
+      "Room service",
+      "Air condition room"
+    ],
+    "includes": [
+      {
+        "one": "6-night hotel accommodations"
+      },
+      { "two": "Breakfast (coffee or tea, juice and bread)" },
+      { "three": "Ground transportation in air-conditioned motorcoach" },
+      { "four": "Professional tour guide" },
+      { "five": "Istanbul Airport pick-up" },
+      { "six": "Ground transportation" },
+      {
+        "seven": " Mosque of Suleiman the Magnificent and Topkapi Palace in Istanbul, Mausoleum of Ataturk in Ankara , Goreme Valley; Valley of Uchisar; Underground city of Kaimacli; Pasabag Valley , Traditional tea in Safranbolu , Gokgol Magarasi cave , Caves and tombs in Eregli , Eydinpinar Waterfalls"
+      },
+      { "eight": "Cableway Viewpoint of Pierre Loti in Istanbul" },
+      { "nine": "Istanbul - Ankara" },
+      { "ten": "CAPADOCIA, CAPADOCIA, SAFRANBOLU" }
+    ],
+    "excludes": [
+      {
+        "one": "Airfare"
+      },
+      { "two": "Airport drop-off at the end of the tour" },
+      { "three": "Mandatory Service Fee - EUR 7.00 per day, per" },
+      { "four": "All personal expenses and additional hotel services" },
+      {
+        "five": "Entrance fees & optional tours (Prices vary from season to season; only the price at the ticket booth / box office is final"
+      }
+    ]
+  },
+
+  {
+    "overview": "The Maldives is an irresistible destination with its white sugar sands, turquoise hue waters, and glowing beaches! We have curated some brilliant Maldives Tour packages from Kochi Kerala that can be customized to suit your pace and priorities! Snatch the adventure activities like deep diving, snorkeling, kayaking, canoeing, and parasailing, and make memories of a lifetime by booking with us. A honeymoon in the Maldives has few parallels anywhere in the world! Get the best deals on Maldives tour packages from Kochi with our well-crafted packages!",
+    "img": "https://i.ibb.co/yqdhhFH/dubai-city.jpg",
+    "age": 29,
+    "stay": "3days,2nights ",
     "ratings": "4.5",
-    "replay-within": "4 hours",
-    "languages": "English",
-    "activityOne": "pickup & driving tours",
-    "activityTwo": "translation & interpretaion",
-    "activityThree": "Food & Resturants",
-    "activityFour": "History & Culture",
-    "activityFive": "Exploration & Sightseeing",
-    "activitySix": "Shopping",
-    "activitySeven": "NightLife & Bars",
-    "about": " Artist and Astrophysicist.",
-    "place": "I'm on Showaround to stay connected with my Showaround friends!Become a native New Yorker with me: I know the latest buzz from the thriving artist communities, best food in town that are both high quality and local. I respond quickly and can arrange for you to be immersed in New York culture! Just let me know your bucket list and I will make it happen. ***5 hrs. tour minimum*** Check out my featured article: https://blog.showaround.com/get-to-know-showaround-locals-in-new-york-meet-jackie/"
+    "name": "Dubai tour packages",
+    "price": "$410/person",
+    "journey": "Dhaka-Dubai-Dhaka",
+    "place-img": {
+      "img-1": "https://i.ibb.co/hcH0Srn/dubai-img-01.jpg",
+      "img-2": "https://i.ibb.co/41R579B/dubai-img-02.jpg",
+      "img-3": "https://i.ibb.co/C6SKszH/dubai-img-03.jpg"
+    },
+    "itinerary": [
+      { "firstDay": "Dubai Arrivals" },
+      { "secondDay": "Dubai City Tour" },
+      { "thirdDay": "Dubai Departure" }
+    ],
+    "includes": [
+      {
+        "one": "Above mentioned/base category room accommodation on selected category hotel"
+      },
+      { "two": "Breakfast, except on Check-in Date" },
+      { "three": "Airport and Hotel transfers by speedboat" },
+      { "four": "Breakfast, Lunch, and Dinner ", "five": "All taxes " },
+      { "six": "Complimentary activities from the hotel" },
+      { "seven": "Sightseeing as per Itinerary on SIC Basis" },
+      { "eight": "Creek Dhow Cruise Dinner with Transfers from hotel" },
+      { "nine": "Duabi Local Tour (half-day) on SIC basis" },
+      { "ten": "Total fare includes GST" }
+    ],
+    "excludes": [
+      {
+        "one": "Any portage at airports and hotels, tips, insurance, wine, mineral water, telephone charges, and all items of personal nature"
+      },
+      { "two": "Optional activities are not included" },
+      {
+        "three": "Entry fees for Dubai Museum & other sites during local tour"
+      },
+
+      {
+        "four": "Hotel Early Check-in / Late Check-out Charges, if applicable"
+      },
+      {
+        "five": "Airfare, Visa Processing fees "
+      }
+    ],
+    "termsAndCondition": [
+      {
+        "one": "Child of 12 years & above is considered adults"
+      },
+      { "two": "The Rates are as of now and No Bookings made" },
+      {
+        "three": "Airfares are 100% Non-refundable"
+      },
+
+      {
+        "four": "Rooms are subject to availability "
+      },
+      {
+        "five": "A land Package for an Infant is complimentary"
+      },
+      {
+        "six": "An extra Charge will be applicable for Additional Baggage "
+      },
+      {
+        "seven": "The Package cost published on the website is the least expected cost of the year, the price can vary with respect to the seasonal traffic of your travel date. "
+      },
+      {
+        "eight": "The airfare charges imposed by the airlines may vary according to seasonal fluctuations and traffic "
+      }
+    ]
+  },
+
+  {
+    "overview": "Our Dubai Tour Packages explore the best of this dream city's urban delights! Brace yourself for some ‘out-of-the-world’ experiences in Dubai! Enthralling desert safari and exhilarating city tour experiences are awaiting you in our Dubai Tour Packages. Check out World's largest, tallest, biggest and longest installations as we take you through the architectural miracles of Dubai. You can savor the stunning skyline crazy good islands including palm-shaped ones and high rise cityscapes. Book your Dubai Tour package now and indulge in the Persian delights, shop all you want and dissolve into the beauty of Dubai's architectural marvels! This Dubai tour package is for all tourists who want to explore the amazing city in the world.",
+    "img": "https://i.ibb.co/JCbkyRF/dubai-couple-tour.jpg",
+    "stay": "3days,3nights",
+    "ratings": "5",
+    "name": "Dubai tour packages for Couple",
+    "price": "$529/per couple",
+    "journey": "Dhaka-Dubai-abu dhabi-Dhaka",
+    "place-img": {
+      "img-1": "https://i.ibb.co/stN2gYp/dubai-couple-tour-img01.jpg",
+      "img-2": "https://i.ibb.co/9VKwTYz/dubai-couple-tour-img02.jpg",
+      "img-3": "https://i.ibb.co/8XM25nR/dubai-couple-tour-img03.jpg"
+    },
+
+    "itinerary": [
+      { "firstDay": "Dubai transfer and Check into Hotel" },
+      { "secondDay": "Half day city tour and desert safari" },
+      { "thirdDay": "Abudhabi city tour-Ferrari world-Burj Khalifa entry" },
+      { "fourthDay": "Miracle garden" },
+      { "fifthDay": "Departure" }
+    ],
+
+    "includes": [
+      {
+        "one": "Above mentioned/base category room accommodation on twin sharing basis"
+      },
+      { "two": "Maldives tour Package from Dhaka price valid for 2 people" },
+      { "three": "Airport - Hotel - Airport transfers in Private basis" },
+      { "four": "Breakfast, Lunch, and Dinner" },
+      { "five": "All sightseeing in SIC basis " },
+      { "six": "Driver's bata, toll, parking, road tax, fuel charges." },
+      {
+        "seven": "Miracle Garden ( SIC Transfers) Desert safari with Dinner ( Transfers) Dubai Mall ( SIC Transfers)Burj Khalifa entry ( 124th Floor ) ( SIC Transfers) Abudhabi city tour ( SIC Transfers),Ferrari world (SIC ),Tax ,Breakfast,Above mentioned all places entry charges"
+      }
+    ],
+    "excludes": [
+      {
+        "one": "Any portage at airports and hotels, tips, insurance, wine, mineral water, telephone charges, and all items of personal nature"
+      },
+      { "two": "Optional activities are not included" },
+      {
+        "three": "Compulsory Gala Dinner on Xmas & New year's Eve if applicable"
+      },
+
+      {
+        "four": "Any other services not specifically mentioned in the inclusions"
+      },
+      {
+        "five": "flight and Visa Charges"
+      },
+      {
+        "six": "Lunch and Dinner are not included in cp plans."
+      },
+      {
+        "seven": "Helicopter ride and Yatch fee"
+      }
+    ],
+    "termsAndCondition": [
+      {
+        "one": "Please read these terms and conditions carefully before using Our Service. The below terms and conditions are considered as the binding contract between every customer and the company, considering the plan confirmed at the time of booking as final approving the below terms"
+      },
+      {
+        "two": "The Pricing provided for the package is for the specified dates and valid for a specific period of timeCancellations of the package will be carried out only as per our policies, and partial cancellations or amendments will be made as per the fare and policies at the point of action"
+      },
+      {
+        "three": "The Resorts and destinations suggested by our side will be always open for suggestions and changes before booking, as once the booking has been made or at the time of travel the change in hotels or destination is not possible"
+      },
+
+      {
+        "four": "Please note that after the finalization of the Tour/ service Cost, if there are any Hike in entrance fees of monuments / museums, Taxes, fuel cost or guide charges – by Govt of India, the same would be charged as extra "
+      },
+      {
+        "five": "All itineraries are sample itineraries, intended to give you a general idea of the likely trip schedule. Numerous factors such as weather, road conditions, the physical ability of the participants etc. may dictate itinerary changes either before the tour or while on the trail. We reserve the right to change any schedule in the interest of the trip participants' safety, comfort & general well being"
+      },
+      {
+        "six": "We shall not be responsible for any delays & alterations in the programme or expenses incurred – directly or indirectly – due to natural hazards, flight cancellations, accident, breakdown of machinery or equipment's, breakdown of transport, weather, sickness, landslides, political closures or any untoward incidents "
+      },
+      {
+        "seven": "We shall not be responsible for any loss, injury or damage to person, property, or otherwise in connection with any accommodation, transportation or other services, resulting – directly or indirectly – from any act of GOD, dangers, fire, accident, breakdown in machinery or equipment, breakdown of transport, wars, civil disturbances, strikes, riots, thefts, pilferages, epidemics, medical or custom department regulations, defaults, or any other causes beyond our control."
+      },
+      {
+        "eight": "We do not have any insurance policy covering the expenses for accident, sickness, loss due to theft, or any other reasons. Visitors are advised to seek such insurance arrangements before hand travelling"
+      },
+      {
+        "nine": "We request all the customers to review travel warnings, announcements, advisories and prohibitions issued by the relevant authorities and governments prior to confirming their bookings"
+      },
+      {
+        "nine": "By offering travel products for particular destinations, we does not warrant that travel to such areas is advisable or without risk. We are not liable for damages or losses that may result from travel to such destinations."
+      },
+      {
+        "ten": "By offering travel products for particular destinations, we does not warrant that travel to such areas is advisable or without risk. We are not liable for damages or losses that may result from travel to such destinations."
+      },
+      {
+        "eleven": "Places will be covered as per the final plan shared by the consultant at the time of booking, any other attractions adding to the plan at the time of travel would be addition and switching attraction in between travel is also not allowed within the package."
+      }
+    ]
+  },
+  {
+    "overview": "The Maldives is an irresistible destination with its white sugar sands, turquoise hue waters, and glowing beaches! We have curated some brilliant Maldives Tour packages from Kochi Kerala that can be customized to suit your pace and priorities! Snatch the adventure activities like deep diving, snorkeling, kayaking, canoeing, and parasailing, and make memories of a lifetime by booking with us. A honeymoon in the Maldives has few parallels anywhere in the world! Get the best deals on Maldives tour packages from Kochi with our well-crafted packages!",
+    "img": "https://i.ibb.co/vm9tn8G/maldives-img01.jpg",
+    "stay": "4days,5nights stay",
+    "ratings": "5",
+    "name": "Maldives tour packages",
+    "price": "$410/person",
+    "journey": "Dhaka-Maldives-Dhaka",
+    "place-img": {
+      "img-1": "https://i.ibb.co/QcB1JYr/maldives-img02.jpg",
+      "img-2": "https://i.ibb.co/m0yDG4N/maldives-img03.jpg",
+      "img-3": "https://i.ibb.co/3Cg8ncK/maldives-img04.jpg"
+    },
+
+    "itinerary": [
+      { "firstDay": "Maldives Arrivals" },
+      { "secondDay": "Day for leisure" },
+      { "thirdDay": "Day for Water sports" },
+      { "fourthDay": "Maldives Departure" }
+    ],
+
+    "includes": [
+      {
+        "one": "Above mentioned/base category room accommodation on twin sharing basis"
+      },
+      { "two": "Maldives tour Package from Dhaka price valid for 2 people" },
+      { "three": "Airport and Hotel transfers by speedboat" },
+      { "four": "Breakfast, Lunch, and Dinner ", "five": "All taxes " },
+      { "six": "Complimentary activities from the hotel" }
+    ],
+    "excludes": [
+      {
+        "one": "Any portage at airports and hotels, tips, insurance, wine, mineral water, telephone charges, and all items of personal nature"
+      },
+      { "two": "Optional activities are not included" },
+      {
+        "three": "Compulsory Gala Dinner on Xmas & New year's Eve if applicable"
+      },
+
+      {
+        "four": "Any other services not specifically mentioned in the inclusions"
+      }
+    ],
+    "termsAndCondition": [
+      {
+        "one": "Child of 12 years & above is considered adults"
+      },
+      { "two": "The Rates are as of now and No Bookings made" },
+      {
+        "three": "Airfares are 100% Non-refundable"
+      },
+
+      {
+        "four": "Rooms are subject to availability "
+      },
+      {
+        "five": "A land Package for an Infant is complimentary"
+      },
+      {
+        "six": "An extra Charge will be applicable for Additional Baggage "
+      },
+      {
+        "seven": "The Package cost published on the website is the least expected cost of the year, the price can vary with respect to the seasonal traffic of your travel date. "
+      },
+      {
+        "eight": "The airfare charges imposed by the airlines may vary according to seasonal fluctuations and traffic "
+      }
+    ]
+  },
+  {
+    "overview": "The Maldives is an alluring destination with its white sugar sands, turquoise hue waters, and glowing beaches! We have curated some brilliant Maldives Tour packages from Kochi Kerala that can be customized to suit your pace and priorities! Snatch the adventure activities like deep diving, snorkeling, kayaking, canoeing, and parasailing, and make memories of a lifetime by booking with us. A honeymoon in the Maldives has few parallels anywhere in the world! Get the best deals on Maldives tour packages from Kochi with our well-crafted packages!",
+    "img": "https://i.ibb.co/Y7vPbMY/maidives-couple-tour-img.jpg",
+    "stay": "3days,3nights",
+    "ratings": "5",
+    "name": "Maldives Honeymoon packages",
+    "price": "$569/per couple",
+    "journey": "Dhaka-Maldives-Dhaka",
+    "place-img": {
+      "img-1": "https://i.ibb.co/1Rd3Gzg/maldives-couple-tour-img01.jpg",
+      "img-2": "https://i.ibb.co/Dg1G7j9/maldives-couple-tour-img02.jpg",
+      "img-3": "https://i.ibb.co/QfRhH0f/maldives-couple-tour-img03.jpg"
+    },
+
+    "itinerary": [
+      { "firstDay": "Maldives Arrivals" },
+      { "secondDay": "Day for leisure" },
+      { "thirdDay": "Day for Water sports" },
+      { "fourthDay": "Maldives Departure" }
+    ],
+
+    "includes": [
+      {
+        "one": "Above mentioned/base category room accommodation on twin sharing basis"
+      },
+      { "two": "Maldives tour Package from Dhaka price valid for 2 people" },
+      { "three": "Airport and Hotel transfers by speedboat" },
+      { "four": "Breakfast, Lunch, and Dinner" },
+      { "five": "All taxes " },
+      { "six": "Complimentary activities from the hotel" },
+      { "seven": "Medhufushi island resort" }
+    ],
+    "excludes": [
+      {
+        "one": "Any portage at airports and hotels, tips, insurance, wine, mineral water, telephone charges, and all items of personal nature"
+      },
+      { "two": "Optional activities are not included" },
+      {
+        "three": "Compulsory Gala Dinner on Xmas & New year's Eve if applicable"
+      },
+
+      {
+        "four": "Any other services not specifically mentioned in the inclusions"
+      },
+      {
+        "five": "flight and Visa Charges"
+      }
+    ],
+    "termsAndCondition": [
+      {
+        "one": "Please read these terms and conditions carefully before using Our Service. The below terms and conditions are considered as the binding contract between every customer and the company, considering the plan confirmed at the time of booking as final approving the below terms"
+      },
+      {
+        "two": "The Pricing provided for the package is for the specified dates and valid for a specific period of timeCancellations of the package will be carried out only as per our policies, and partial cancellations or amendments will be made as per the fare and policies at the point of action"
+      },
+      {
+        "three": "The Resorts and destinations suggested by our side will be always open for suggestions and changes before booking, as once the booking has been made or at the time of travel the change in hotels or destination is not possible"
+      },
+
+      {
+        "four": "Please note that after the finalization of the Tour/ service Cost, if there are any Hike in entrance fees of monuments / museums, Taxes, fuel cost or guide charges – by Govt of India, the same would be charged as extra "
+      },
+      {
+        "five": "All itineraries are sample itineraries, intended to give you a general idea of the likely trip schedule. Numerous factors such as weather, road conditions, the physical ability of the participants etc. may dictate itinerary changes either before the tour or while on the trail. We reserve the right to change any schedule in the interest of the trip participants' safety, comfort & general well being"
+      },
+      {
+        "six": "We shall not be responsible for any delays & alterations in the programme or expenses incurred – directly or indirectly – due to natural hazards, flight cancellations, accident, breakdown of machinery or equipment's, breakdown of transport, weather, sickness, landslides, political closures or any untoward incidents "
+      },
+      {
+        "seven": "We shall not be responsible for any loss, injury or damage to person, property, or otherwise in connection with any accommodation, transportation or other services, resulting – directly or indirectly – from any act of GOD, dangers, fire, accident, breakdown in machinery or equipment, breakdown of transport, wars, civil disturbances, strikes, riots, thefts, pilferages, epidemics, medical or custom department regulations, defaults, or any other causes beyond our control."
+      },
+      {
+        "eight": "We do not have any insurance policy covering the expenses for accident, sickness, loss due to theft, or any other reasons. Visitors are advised to seek such insurance arrangements before hand travelling"
+      },
+      {
+        "nine": "We request all the customers to review travel warnings, announcements, advisories and prohibitions issued by the relevant authorities and governments prior to confirming their bookings"
+      },
+      {
+        "nine": "By offering travel products for particular destinations, we does not warrant that travel to such areas is advisable or without risk. We are not liable for damages or losses that may result from travel to such destinations."
+      },
+      {
+        "ten": "By offering travel products for particular destinations, we does not warrant that travel to such areas is advisable or without risk. We are not liable for damages or losses that may result from travel to such destinations."
+      },
+      {
+        "eleven": "Places will be covered as per the final plan shared by the consultant at the time of booking, any other attractions adding to the plan at the time of travel would be addition and switching attraction in between travel is also not allowed within the package."
+      }
+    ]
   }
 ]

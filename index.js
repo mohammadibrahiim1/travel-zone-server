@@ -7,6 +7,7 @@ const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 // password:0kw4llp4OEF6BZGQ
 
 const cors = require("cors");
+const { query } = require("express");
 const port = process.env.PORT || 5000;
 
 app.use(cors());
@@ -27,7 +28,7 @@ async function run() {
   const tourGuideCollection = client
     .db("travel-agency")
     .collection("tourGuide");
-  // const tourguide = require('./Packages/Packages.json');
+  const packages = require('./Packages/Packages.json');
   try {
     app.get("/places", async (req, res) => {
       const query = {};
@@ -68,16 +69,17 @@ async function run() {
       res.send(guideDetails);
       console.log(guideDetails);
     });
+
+    app.get("/packages",  (req,res)=> {
+      // const query = {};
+      // const allPackages = packages.find();
+      res.send(packages);
+      console.log(packages);
+    })
   } finally {
   }
 }
 run().catch((error) => console.log(error));
-
-// client.connect(err => {
-//   const collection = client.db("test").collection("devices");
-//   // perform actions on the collection object
-//   client.close();
-// });
 
 app.get("/", (req, res) => {
   res.send("yes working");
