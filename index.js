@@ -28,7 +28,7 @@ async function run() {
   const tourGuideCollection = client
     .db("travel-agency")
     .collection("tourGuide");
-  const packages = require('./Packages/Packages.json');
+  const packagesCollection = client.db("travel-agency").collection("Packages");
   try {
     app.get("/places", async (req, res) => {
       const query = {};
@@ -67,15 +67,23 @@ async function run() {
       const query = { _id: new ObjectId(id) };
       const guideDetails = await tourGuideCollection.findOne(query);
       res.send(guideDetails);
-      console.log(guideDetails);
+      // console.log(guideDetails);
     });
 
-    app.get("/packages",  (req,res)=> {
-      // const query = {};
-      // const allPackages = packages.find();
+    app.get("/packages", async (req, res) => {
+      const query = {};
+      const packages = await packagesCollection.find(query).toArray();
       res.send(packages);
-      console.log(packages);
-    })
+      // console.log(tourGuide);
+    });
+
+    app.get("/packages/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const selectedPackage = await packagesCollection.findOne(query);
+      res.send(selectedPackage);
+      console.log(selectedPackage);
+    });
   } finally {
   }
 }
