@@ -71,7 +71,18 @@ async function run() {
     });
 
     app.get("/packages", async (req, res) => {
-      const query = {};
+      let query = {};
+      console.log(req.query.IntFilter, req.query.dmsFilter);
+      if (req.query.IntFilter === "true" && req.query.dmsFilter === "false") {
+        query = {
+          tourCategory: "International",
+        };
+      }
+      if (req.query.IntFilter=== "false" && req.query.dmsFilter === "true") {
+        query = {
+          tourCategory: "Domestic",
+        };
+      }
       const packages = await packagesCollection.find(query).toArray();
       res.send(packages);
       // console.log(tourGuide);

@@ -8,6 +8,7 @@
     "stay": "3days,2Nights",
     "journey": "Dhaka-Paris-Dhaka",
     "ratings": "5",
+
     "name": "Paris-All stunning place",
     "price": "$271/person",
     "place-img": {
@@ -262,7 +263,7 @@
   {
     "overview": "The Maldives is an irresistible destination with its white sugar sands, turquoise hue waters, and glowing beaches! We have curated some brilliant Maldives Tour packages from Kochi Kerala that can be customized to suit your pace and priorities! Snatch the adventure activities like deep diving, snorkeling, kayaking, canoeing, and parasailing, and make memories of a lifetime by booking with us. A honeymoon in the Maldives has few parallels anywhere in the world! Get the best deals on Maldives tour packages from Kochi with our well-crafted packages!",
     "img": "https://i.ibb.co/yqdhhFH/dubai-city.jpg",
-    "tourCategory": "International",
+    "tourCategory": "Domestic",
     "isChecked": false,
     "stay": "3days,2nights ",
     "ratings": "4.5",
@@ -315,7 +316,7 @@
     "isChecked": true,
     "ratings": "5",
     "code": "24537",
-    "tourCategory": "International",
+    "tourCategory": "Domestic",
     "name": "Dubai tour packages for Couple",
     "price": "$590/per couple",
     "journey": "Dhaka-Dubai-abu dhabi-Dhaka",
@@ -427,7 +428,7 @@
     "isChecked": true,
     "ratings": "5",
     "code": "24539",
-    "tourCategory": "International",
+    "tourCategory": "Domestic",
     "name": "Maldives Honeymoon packages",
     "price": "$569/per couple",
     "journey": "Dhaka-Maldives-Dhaka",
