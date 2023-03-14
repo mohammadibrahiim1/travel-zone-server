@@ -90,6 +90,7 @@ async function run() {
 
     app.get("/packages/:id", async (req, res) => {
       const id = req.params.id;
+      console.log(id);
       const query = { _id: new ObjectId(id) };
       const selectedPackage = await packagesCollection.findOne(query);
       res.send(selectedPackage);
