@@ -11,11 +11,9 @@
 
     "name": "Paris-All stunning place",
     "price": "$271/person",
-    "place-img": {
-      "img-1": "https://i.ibb.co/jDppvyj/paris-img-01.jpg",
-      "img-2": "https://i.ibb.co/BG9BNPv/paris-img-02.jpg",
-      "img-3": "https://i.ibb.co/5x9Cvfw/paris-img-03.jpg"
-    },
+    "placeimg1": "https://i.ibb.co/jDppvyj/paris-img-01.jpg",
+    "placeimg2": "https://i.ibb.co/BG9BNPv/paris-img-02.jpg",
+    "placeimg3": "https://i.ibb.co/5x9Cvfw/paris-img-03.jpg",
     "itinerary": [
       "paris-Reimis-Luxembourg",
       "Luxembourg-Trier-Koblenz-Frankfurt",
@@ -74,14 +72,9 @@
       "Luxembourg-Trier-Koblenz-Frankfurt",
       "Frankfurt-Bonn-cologn-Amsterdam"
     ],
-    "place-img": [
-      {
-        "img-1": "https://i.ibb.co/Jq4twpX/nepal-img-01.jpg"
-      },
-      { "img-2": "https://i.ibb.co/S3y4NL7/nepal-img-02.jpg" },
-      { "img-3": "https://i.ibb.co/fd3Shwj/nepal-img-03.jpg" }
-    ],
-
+    "placeimg1": "https://i.ibb.co/Jq4twpX/nepal-img-01.jpg",
+    "placeimg2": "https://i.ibb.co/S3y4NL7/nepal-img-02.jpg",
+    "placeimg3": "https://i.ibb.co/fd3Shwj/nepal-img-03.jpg",
     "includes": [
       " Private Tour",
       "Breakfast (coffee or tea, juice and bread)",
@@ -104,11 +97,9 @@
     "name": "Japan-All stunning place",
     "journey": "Dhaka-Tokyo-Hiroshima-Dhaka",
     "price": "$2500/person",
-    "place-img": {
-      "img-1": "https://i.ibb.co/CwdT1YF/japan-img-01.jpg",
-      "img-2": "https://i.ibb.co/YtwMNs6/tokyo.jpg",
-      "img-3": "https://i.ibb.co/bmHVMq8/hiroshima.jpg"
-    },
+    "placeimg1": "https://i.ibb.co/CwdT1YF/japan-img-01.jpg",
+    "placeimg2  ": "https://i.ibb.co/YtwMNs6/tokyo.jpg",
+    "placeimg3 ": "https://i.ibb.co/bmHVMq8/hiroshima.jpg",
     "itinerary": [
       "Tokyo",
       "Tokyo",
@@ -139,15 +130,20 @@
       "CAll personal expenses including hotel room service and meals; however, you have the option to pay for meals the tour guide arranges",
       " Entrance fees & optional tours (Prices vary from season to season; only the price at the ticket booth / box office is final)"
     ],
+    "reservationInfo": [
+      "Immediately after submitting your reservation you will receive a Receipt of Reservation via email.",
+      "Within one to two business days of submitting your reservation you will receive a confirmation email from us. If you need to book an airline ticket, we recommend that you do so after you receive a confirmation of your tour reservation from us.",
+      " An E-Ticket will be sent to you via email as soon as details of your reservation are confirmed or your supporting information is received by us. We will provide you with all detailed information about your tour on the E-Ticket. Contact information for local tour provider will be included on E-Ticket for your convenience or re-confirmation purpose if re-confirmation is required.",
+      " Simply print your E-Ticket and present it with your valid photo ID on the day of your activity to your tour guide. Please remember E-Ticket is your proof of purchase."
+    ],
 
-    "facilities": [
-      "flight facility",
-      "5star hotel",
-      "site seeing",
-      "transport",
-      "Meels",
-      "Room service",
-      "Air condition room"
+    "termsAndCondition": [
+      "Your purchase does not guarantee confirmation. Your purchase will initiate a reservation process. We will confirm with you via email within one to two business days.",
+      "Prices may vary due to availability. We reserve the right to make price adjustment without prior notice.",
+      " Please refer to our Standard Amendment, Cancellation and Refund Policy before you make reservation.",
+      " Please refer to Customer Agreement before you make reservation.",
+      " For refunds processed by credit card or paypal, there will be a 6% transaction fee that will be deducted from the overall refund amount. The refund amount can also be credited directly to your account for future bookings without any transaction fee.",
+      "  Local tour provider reserves the right to make modifications to tour arrangements including order of tour activities, hotel and its location if deemed necessary."
     ]
   },
   {
@@ -160,12 +156,10 @@
     "name": "India-Kashmir",
     "price": "$230/person",
     "journey": "Dhaka-India-Kashmir-Dhaka",
-    "place-img": {
-      "img-1": "https://i.ibb.co/mBgcX78/kashmir-img-01.jpg",
-      "img-2": "https://i.ibb.co/HnXRKjJ/kashmir-img-02.jpg",
-      "img-3": "https://i.ibb.co/nch1cDn/kashmir-img-03.jpg"
-    },
 
+    "placeimg1": "https://i.ibb.co/mBgcX78/kashmir-img-01.jpg",
+    "placeimg2": "https://i.ibb.co/HnXRKjJ/kashmir-img-02.jpg",
+    "placeimg3": "https://i.ibb.co/nch1cDn/kashmir-img-03.jpg",
     "includes": [
       "Assistance Upon arrival at Sheikh Ul Alam int. airport ",
       "Traditional welcome in the hotel with welcome Drink on arraival",
@@ -210,12 +204,10 @@
 
     "name": "turkey-All stunning place",
     "price": "$482/person",
-    "place-img": {
-      "img-1": "https://i.ibb.co/SJSDhKy/turkey.jpg",
-      "img-2": "https://i.ibb.co/W3q6vj8/turkey-istunbul.jpg",
-      "img-3": "https://i.ibb.co/19W6CpQ/turkey-img.jpg"
-    },
 
+    "placeimg1": "https://i.ibb.co/SJSDhKy/turkey.jpg",
+    "placeimg2": "https://i.ibb.co/W3q6vj8/turkey-istunbul.jpg",
+    "placeimg3": "https://i.ibb.co/19W6CpQ/turkey-img.jpg",
     "facilities": [
       "flight facility",
       "5star hotel",
@@ -271,11 +263,10 @@
     "name": "Dubai tour packages",
     "price": "$410/person",
     "journey": "Dhaka-Dubai-Dhaka",
-    "place-img": {
-      "img-1": "https://i.ibb.co/hcH0Srn/dubai-img-01.jpg",
-      "img-2": "https://i.ibb.co/41R579B/dubai-img-02.jpg",
-      "img-3": "https://i.ibb.co/C6SKszH/dubai-img-03.jpg"
-    },
+
+    "placeimg1": "https://i.ibb.co/hcH0Srn/dubai-img-01.jpg",
+    "placeimg2": "https://i.ibb.co/41R579B/dubai-img-02.jpg",
+    "placeimg3": "https://i.ibb.co/C6SKszH/dubai-img-03.jpg",
     "itinerary": ["Dubai Arrivals", "Dubai City Tour", "Dubai Departure"],
     "includes": [
       "Above mentioned/base category room accommodation on selected category hotel",
@@ -320,12 +311,10 @@
     "name": "Dubai tour packages for Couple",
     "price": "$590/per couple",
     "journey": "Dhaka-Dubai-abu dhabi-Dhaka",
-    "place-img": {
-      "img-1": "https://i.ibb.co/stN2gYp/dubai-couple-tour-img01.jpg",
-      "img-2": "https://i.ibb.co/9VKwTYz/dubai-couple-tour-img02.jpg",
-      "img-3": "https://i.ibb.co/8XM25nR/dubai-couple-tour-img03.jpg"
-    },
 
+    "placeimg1": "https://i.ibb.co/stN2gYp/dubai-couple-tour-img01.jpg",
+    "placeimg2": "https://i.ibb.co/9VKwTYz/dubai-couple-tour-img02.jpg",
+    "placeimg3": "https://i.ibb.co/8XM25nR/dubai-couple-tour-img03.jpg",
     "itinerary": [
       "Dubai transfer and Check into Hotel",
       "Half day city tour and desert safari",
@@ -382,12 +371,10 @@
     "name": "Maldives tour packages",
     "price": "$410/person",
     "journey": "Dhaka-Maldives-Dhaka",
-    "place-img": {
-      "img-1": "https://i.ibb.co/QcB1JYr/maldives-img02.jpg",
-      "img-2": "https://i.ibb.co/m0yDG4N/maldives-img03.jpg",
-      "img-3": "https://i.ibb.co/3Cg8ncK/maldives-img04.jpg"
-    },
 
+    "placeimg1": "https://i.ibb.co/QcB1JYr/maldives-img02.jpg",
+    "placeimg2": "https://i.ibb.co/m0yDG4N/maldives-img03.jpg",
+    "placeimg3": "https://i.ibb.co/3Cg8ncK/maldives-img04.jpg",
     "itinerary": [
       "Maldives Arrivals",
       "Day for leisure",
@@ -432,12 +419,10 @@
     "name": "Maldives Honeymoon packages",
     "price": "$569/per couple",
     "journey": "Dhaka-Maldives-Dhaka",
-    "place-img": {
-      "img-1": "https://i.ibb.co/1Rd3Gzg/maldives-couple-tour-img01.jpg",
-      "img-2": "https://i.ibb.co/Dg1G7j9/maldives-couple-tour-img02.jpg",
-      "img-3": "https://i.ibb.co/QfRhH0f/maldives-couple-tour-img03.jpg"
-    },
 
+    "placeimg1": "https://i.ibb.co/1Rd3Gzg/maldives-couple-tour-img01.jpg",
+    "placeimg2": "https://i.ibb.co/Dg1G7j9/maldives-couple-tour-img02.jpg",
+    "placeimg3": "https://i.ibb.co/QfRhH0f/maldives-couple-tour-img03.jpg",
     "itinerary": [
       "Maldives Arrivals",
       "Day for leisure",

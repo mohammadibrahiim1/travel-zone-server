@@ -70,7 +70,7 @@ async function run() {
       // console.log(guideDetails);
     });
 
-    app.get("/packages", async (req, res) => {
+    app.get("/packages", async (req, res) => {  
       let query = {};
       console.log(req.query.IntFilter, req.query.dmsFilter);
       if (req.query.IntFilter === "true" && req.query.dmsFilter === "false") {
