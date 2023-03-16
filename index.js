@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
+const stripe = require("stripe")(
+  "sk_test_51MlpzGLrYWLOOZ8Ueo9lSKyjvBkUNZAQCqRDvVO5x1wiwu0MbJ2V6DeVFW7YHcoeCi0axInmbfmxCfIE5MrvaswE003sZXKmdG"
+);
+// sk_test_51MlpzGLrYWLOOZ8Ueo9lSKyjvBkUNZAQCqRDvVO5x1wiwu0MbJ2V6DeVFW7YHcoeCi0axInmbfmxCfIE5MrvaswE003sZXKmdG
 // const ObjectId = require('mongodb').ObjectId;
 
 // user: user2
@@ -29,6 +33,7 @@ async function run() {
     .db("travel-agency")
     .collection("tourGuide");
   const packagesCollection = client.db("travel-agency").collection("Packages");
+  const paymentCollection = client.db("travel-agency").collection("payments");
   try {
     app.get("/places", async (req, res) => {
       const query = {};
@@ -70,7 +75,7 @@ async function run() {
       // console.log(guideDetails);
     });
 
-    app.get("/packages", async (req, res) => {  
+    app.get("/packages", async (req, res) => {
       let query = {};
       console.log(req.query.IntFilter, req.query.dmsFilter);
       if (req.query.IntFilter === "true" && req.query.dmsFilter === "false") {
@@ -78,11 +83,24 @@ async function run() {
           tourCategory: "International",
         };
       }
-      if (req.query.IntFilter=== "false" && req.query.dmsFilter === "true") {
+      // if (req.query.IntFilter === "true" && req.query.dmsFilter === "true") {
+      //   query = {
+      //     tourCategory: "International",
+      //   };
+      // }
+
+      if (req.query.IntFilter === "false" && req.query.dmsFilter === "true") {
         query = {
           tourCategory: "Domestic",
         };
       }
+
+      // if (req.query.IntFilter=== "true" && req.query.dmsFilter === "true") {
+      //   query = {
+      //     tourCategory: "Domestic",
+      //     tourCategory:"International"
+      //   };
+      // }
       const packages = await packagesCollection.find(query).toArray();
       res.send(packages);
       // console.log(tourGuide);
@@ -93,7 +111,62 @@ async function run() {
       const query = { _id: new ObjectId(id) };
       const selectedPackage = await packagesCollection.findOne(query);
       res.send(selectedPackage);
-      console.log(selectedPackage);
+      // console.log(selectedPackage);
+    });
+
+    // ---------------stripe payment method------------
+
+    // app.post("/createPaymentIntent", async (req, res) => {
+    //   const {data} = req.body;
+    //   const price = data.price;
+    //   const amount = price * 100;
+
+    //   const paymentIntent = await stripe.paymentIntents.create({
+    //     currency: "usd",
+    //     amount: amount,
+    //     payment_method_types: ["card"],
+    //   });
+    //   res.send({
+    //     clientSecret: paymentIntent.client_secret,
+    //   });
+    // });
+
+    app.post("/create-payment-intent", async (req, res) => {
+      const data = req.body;
+      const price = data.price;
+      const amount = price * 100;
+
+      // Create a PaymentIntent with the order amount and currency
+      const paymentIntent = await stripe.paymentIntents.create({
+        // amount: calculateOrderAmount(items),
+        currency: "usd",
+        amount: amount,
+        payment_method_types: ["card"],
+      });
+
+      res.send({
+        clientSecret: paymentIntent.client_secret,
+      });
+    });
+
+    // store payments collection in database
+    app.post("/payments", async (req, res) => {
+      const payment = req.body;
+      const result = await paymentCollection.insertOne(payment);
+      // const id = payment.bookingId;
+      // const filter = { _id: new ObjectId(id) };
+      // const updatedDocument = {
+      //   $set: {
+      //     paid: true,
+      //     transactionId: payment.transactionId,
+      //   },
+      // };
+      // const updatedResult = await bookingsCollection.updateOne(
+      //   filter,
+      //   updatedDocument
+      // );
+      // res.send();
+      res.send(result);
     });
   } finally {
   }
