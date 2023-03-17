@@ -1,0 +1,9 @@
+{
+  "workbench.colorCustomizations": {
+
+  },
+  "editor.fontLigatures": false,
+  "files.autoSave": "afterDelay",
+  "editor.fontSize": 18,
+  "editor.fontFamily": "JetBrains Mono"
+}

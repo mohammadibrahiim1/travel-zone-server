@@ -1,9 +1,13 @@
 const express = require("express");
+const DB = require('./connectDB')
 const app = express();
-const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
+const Router = require('./routes/routes');
+const ApiRouter = require('./routes/API/apiRoute');
+const { ObjectId } = require("mongodb");
 const stripe = require("stripe")(
   "sk_test_51MlpzGLrYWLOOZ8Ueo9lSKyjvBkUNZAQCqRDvVO5x1wiwu0MbJ2V6DeVFW7YHcoeCi0axInmbfmxCfIE5MrvaswE003sZXKmdG"
 );
+const FlightController = require('./controllers/API/FlightController')
 // sk_test_51MlpzGLrYWLOOZ8Ueo9lSKyjvBkUNZAQCqRDvVO5x1wiwu0MbJ2V6DeVFW7YHcoeCi0axInmbfmxCfIE5MrvaswE003sZXKmdG
 // const ObjectId = require('mongodb').ObjectId;
 
@@ -17,23 +21,25 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-const uri =
-  "mongodb+srv://user2:0kw4llp4OEF6BZGQ@cluster0.wuwpwwx.mongodb.net/?retryWrites=true&w=majority";
-console.log(uri);
-const client = new MongoClient(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  serverApi: ServerApiVersion.v1,
-});
+//End dataBase Connection 
+app.use('/', Router);
+app.use('/api', ApiRouter);
+
+// const uri =
+//   "mongodb+srv://user2:0kw4llp4OEF6BZGQ@cluster0.wuwpwwx.mongodb.net/?retryWrites=true&w=majority";
+// console.log(uri);
+// const client = new MongoClient(uri, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+//   serverApi: ServerApiVersion.v1,
+// });
 
 async function run() {
-  const placesCollection = client.db("travel-agency").collection("places");
-  const reviewsCollection = client.db("travel-agency").collection("reviews");
-  const tourGuideCollection = client
-    .db("travel-agency")
-    .collection("tourGuide");
-  const packagesCollection = client.db("travel-agency").collection("Packages");
-  const paymentCollection = client.db("travel-agency").collection("payments");
+  const placesCollection = DB.client.db("travel-agency").collection("places");
+  const reviewsCollection = DB.client.db("travel-agency").collection("reviews");
+  const tourGuideCollection = DB.client.db("travel-agency").collection("tourGuide");
+  const packagesCollection = DB.client.db("travel-agency").collection("Packages");
+  const paymentCollection = DB.client.db("travel-agency").collection("payments");
   try {
     app.get("/places", async (req, res) => {
       const query = {};
@@ -167,6 +173,9 @@ async function run() {
       // );
       // res.send();
       res.send(result);
+
+      // flight controller
+      app.get('/flights', FlightController.show)
     });
   } finally {
   }
