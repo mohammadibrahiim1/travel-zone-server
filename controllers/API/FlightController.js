@@ -1,6 +1,7 @@
 const { ObjectId } = require('mongodb')
 const DB = require('../../connectDB');
-const flights = DB.client.db('travel-agency').collection('flights')
+const flights = DB.client.db('travel-agency').collection('flights');
+// console.log(flights);
 let lastTime = 0
 let Information = []
 const throttle = (fn, delay = 1000 * 60 * 10) => {
@@ -58,6 +59,10 @@ exports.show = async (req, res) => {
     const init = throttle(updateInfo); init()
     let filter = []
     let pageConfig = { content: 20, page: 1 }
+
+
+    req.query.class ? filter.push({'class': req.query.class}) : null
+    req.query.trip ? filter.push({'trip': req.query.trip}) : null
 
 
     req.query.return == 1 ? filter.push({ return: true }) : req.query.return == 0 ? filter.push({ return: false }) : null
