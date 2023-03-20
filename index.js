@@ -89,34 +89,33 @@ async function run() {
     });
 
     app.get("/packages", async (req, res) => {
-      let query = {};
-      console.log(req.query.IntFilter, req.query.dmsFilter);
-      if (req.query.IntFilter === "true" && req.query.dmsFilter === "false") {
-        query = {
-          tourCategory: "International",
-        };
+      const param = req.query;
+      if (!param.intFilter && !param.dmsFilter) {
+        const data = await packagesCollection.find({}).toArray();
+        return res.send(data);
+      } else {
+        let filterQueries = [];
+        if (param.intFilter) {
+          filterQueries = [
+            ...filterQueries,
+            {
+              tourCategory: "International",
+            },
+          ];
+        }
+        if (param.dmsFilter) {
+          filterQueries = [
+            ...filterQueries,
+            {
+              tourCategory: "Domestic",
+            },
+          ];
+        }
+        const filterData = await packagesCollection.find({
+          $or:filterQueries
+        }).toArray();
+        return res.send(filterData);
       }
-      // if (req.query.IntFilter === "true" && req.query.dmsFilter === "true") {
-      //   query = {
-      //     tourCategory: "International",
-      //   };
-      // }
-
-      if (req.query.IntFilter === "false" && req.query.dmsFilter === "true") {
-        query = {
-          tourCategory: "Domestic",
-        };
-      }
-
-      // if (req.query.IntFilter=== "true" && req.query.dmsFilter === "true") {
-      //   query = {
-      //     tourCategory: "Domestic",
-      //     tourCategory:"International"
-      //   };
-      // }
-      const packages = await packagesCollection.find(query).toArray();
-      res.send(packages);
-      // console.log(tourGuide);
     });
 
     app.get("/packages/:id", async (req, res) => {
@@ -150,6 +149,7 @@ async function run() {
       const amount = price * 100;
 
       // Create a PaymentIntent with the order amount and currency
+
       const paymentIntent = await stripe.paymentIntents.create({
         // amount: calculateOrderAmount(items),
         currency: "usd",
@@ -181,7 +181,7 @@ async function run() {
       // res.send();
       res.send(result);
 
-      // get flight details  by id 
+      // get flight details  by id
 
       // app.get("/api/flights/:id", async (req, res) => {
       //   const id = req.params.id;
@@ -190,8 +190,6 @@ async function run() {
       //   res.send(selectedFlight);
       //   // console.log(selectedPackage);
       // });
-
-    
 
       // flight controller
       app.get("/flights", FlightController.show);
