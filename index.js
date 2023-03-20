@@ -181,120 +181,17 @@ async function run() {
       // res.send();
       res.send(result);
 
-      // get data by checkbox filter
+      // get flight details  by id 
 
-      // app.get("/api/flights", async (req, res) => {
-      //   const param = req.query;
-      //   if (
-      //     !param.flyDFilter &&
-      //     !param.qantFilter &&
-      //     !param.emrFilter &&
-      //     !param.qatarFilter &&
-      //     !param.onewayFilter &&
-      //     !param.returnFilter
-      //   ) {
-      //     const data = await flightsCollection.find({}).toArray();
-      //     return res.send(data);
-      //   } else {
-      //     let filterQueries = [];
-      //     if (param.flyDFilter) {
-      //       filterQueries = [
-      //         ...filterQueries,
-      //         {
-      //           airlines_name: "Flydubai",
-      //         },
-      //       ];
-      //     }
-      //     if (param.qantFilter) {
-      //       filterQueries = [
-      //         ...filterQueries,
-      //         {
-      //           airlines_name: "Qantas",
-      //         },
-      //       ];
-      //     }
-      //     if (param.emrFilter) {
-      //       filterQueries = [
-      //         ...filterQueries,
-      //         {
-      //           airlines_name: "Emirates",
-      //         },
-      //       ];
-      //     }
-      //     if (param.qatarFilter) {
-      //       filterQueries = [
-      //         ...filterQueries,
-      //         {
-      //           airlines_name: "Qatar Airways",
-      //         },
-      //       ];
-      //     }
-      //     if (param.onewayFilter) {
-      //       filterQueries = [
-      //         ...filterQueries,
-      //         {
-      //           trip: "oneway",
-      //         },
-      //       ];
-      //     }
-      //     if (param.returnFilter) {
-      //       filterQueries = [
-      //         ...filterQueries,
-      //         {
-      //           trip: "return",
-      //         },
-      //       ];
-      //     }
-      //   }
+      // app.get("/api/flights/:id", async (req, res) => {
+      //   const id = req.params.id;
+      //   const query = { _id: new ObjectId(id) };
+      //   const selectedFlight = await flightsCollection.findOne(query);
+      //   res.send(selectedFlight);
+      //   // console.log(selectedPackage);
       // });
 
-      // app.get('/category/filter/v2', async (req, res) => {
-      //   const param = req.query
-      //   if(!param.brfFilter && !param.frIntFilter && !param.freeAirFilter && !param.airConFilter && !param.fitness && !param.pool ){
-      //     const data = await categoryCollection.find({}).toArray();
-      //     return res.send(data)
-      //   }else{
-      //     let filterQueries = []
-      //     if(param.brfFilter){
-      //       filterQueries = [...filterQueries, {
-      //         freeBreakFast: "Free breakfast"
-      //       }]
-      //     }
-
-      //     if(param.frIntFilter){
-      //       filterQueries = [...filterQueries, {
-      //         freeInternet: "Free internet"
-      //       }]
-      //     }
-      //     if(param.freeAirFilter){
-      //       filterQueries = [...filterQueries, {
-      //         freeAirportShuttle: "Free airport shuttle"
-      //       }]
-      //     }
-
-      //     if(param.airConFilter){
-      //       filterQueries = [...filterQueries, {
-      //         airConditioned: "Air conditioned"
-      //       }]
-      //     }
-
-      //     if(param.fitness){
-      //       filterQueries = [...filterQueries, {
-      //         fitness: "Fitness"
-      //       }]
-      //     }
-
-      //     if(param.pool){
-      //       filterQueries = [...filterQueries, {
-      //         pool: "Pool"
-      //       }]
-      //     }
-
-      //     const filterData = await categoryCollection.find({$or: filterQueries}).toArray();
-      //     return res.send(filterData)
-
-      //   }
-      // });
+    
 
       // flight controller
       app.get("/flights", FlightController.show);
