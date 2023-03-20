@@ -42,7 +42,7 @@ async function run() {
     .collection("tourGuide");
   const packagesCollection = DB.client
     .db("travel-agency")
-    .collection("Packages");
+    .collection("packages");
   const paymentCollection = DB.client
     .db("travel-agency")
     .collection("payments");
