@@ -37,6 +37,7 @@ app.use("/api", ApiRouter);
 async function run() {
   const placesCollection = DB.client.db("travel-agency").collection("places");
   const reviewsCollection = DB.client.db("travel-agency").collection("reviews");
+  const bookingsCollection = DB.client.db('travel-agency').collection('bookings');
 
   const tourGuideCollection = DB.client
     .db("travel-agency")
@@ -50,9 +51,13 @@ async function run() {
   // const flightsCollection = DB.client.db("travel-agency").collection("flights");
   // const hotelsCollection = DB.client.db()
   try {
-    const hotelPlaceCollection = DB.client.db("travel-agency").collection("hotel-Country");
+    const hotelPlaceCollection = DB.client
+      .db("travel-agency")
+      .collection("hotel-Country");
     // console.log(hotelPlaceCollection);
-    const categoryCollection = DB.client.db("travel-agency").collection("category");
+    const categoryCollection = DB.client
+      .db("travel-agency")
+      .collection("category");
     app.get("/places", async (req, res) => {
       const query = {};
       const places = await placesCollection.find(query).toArray();
@@ -231,167 +236,169 @@ async function run() {
       // flight controller
       app.get("/flights", FlightController.show);
 
-     
-
       // ================
     });
 
+    // ---------------hotel-bookings-------------
 
-
-
-
-
-
-
- // ---------------hotel-bookings-------------
-
- app.get("/hotelPlaces", async (req, res) => {
-  const query = {};
-  const result = await hotelPlaceCollection.find(query).toArray();
-  res.send(result);
-  
-});
-
-app.get("/category", async (req, res) => {
-  if (req.query.country) {
-    const query = { country: req.query.country };
-    const result = await categoryCollection.find(query).toArray();
-    res.send(result);
-  } else {
-    const query = {};
-    const result = await categoryCollection.find(query).toArray();
-    res.send(result);
-    console.log(result);
-  }
-});
-
-// ===============================
-
-app.get("/category/filter/v2", async (req, res) => {
-  const param = req.query;
-  if (
-    !param.brfFilter &&
-    !param.frIntFilter &&
-    !param.freeAirFilter &&
-    !param.airConFilter &&
-    !param.fitness &&
-    !param.pool
-  ) {
-    const data = await categoryCollection.find({}).toArray();
-    return res.send(data);
-  } else {
-    let filterQueries = [];
-    if (param.brfFilter) {
-      filterQueries = [
-        ...filterQueries,
-        {
-          freeBreakFast: "Free breakfast",
-        },
-      ];
-    }
-
-    if (param.frIntFilter) {
-      filterQueries = [
-        ...filterQueries,
-        {
-          freeInternet: "Free internet",
-        },
-      ];
-    }
-    if (param.freeAirFilter) {
-      filterQueries = [
-        ...filterQueries,
-        {
-          freeAirportShuttle: "Free airport shuttle",
-        },
-      ];
-    }
-
-    if (param.airConFilter) {
-      filterQueries = [
-        ...filterQueries,
-        {
-          airConditioned: "Air conditioned",
-        },
-      ];
-    }
-
-    if (param.fitness) {
-      filterQueries = [
-        ...filterQueries,
-        {
-          fitness: "Fitness",
-        },
-      ];
-    }
-
-    if (param.pool) {
-      filterQueries = [
-        ...filterQueries,
-        {
-          pool: "Pool",
-        },
-      ];
-    }
-
-    const filterData = await categoryCollection
-      .find({ $or: filterQueries })
-      .toArray();
-    return res.send(filterData);
-  }
-});
-
-// ==========================================
-
-app.get("/category/:id", async (req, res) => {
-  const id = req.params.id;
-  const query = { _id: new ObjectId(id) };
-  const booking = await categoryCollection.findOne(query);
-  res.send(booking);
-});
-
-app.get("/category/search/getHotelBySearch", async (req, res) => {
-  try {
-    const city = req.query.city;
-    const price = parseInt(req.query.price);
-    const room = parseInt(req.query.room);
-    const guests = parseInt(req.query.guests);
-
-    const hotels = await categoryCollection
-      .find({
-        $and: [
-          city ? { city } : {},
-          price ? { price: { $lte: price } } : {},
-          room ? { room: { $gte: room } } : {},
-          guests ? { guests: { $gte: guests } } : {},
-        ],
-      })
-      .toArray();
-
-    res.status(200).json({
-      success: true,
-      message: "Successful",
-      data: hotels,
+    app.get("/hotelPlaces", async (req, res) => {
+      const query = {};
+      const result = await hotelPlaceCollection.find(query).toArray();
+      res.send(result);
     });
-  } catch (err) {
-    res.status(404).json({
-      success: false,
-      message: "not found",
+
+    app.get("/category", async (req, res) => {
+      if (req.query.country) {
+        const query = { country: req.query.country };
+        const result = await categoryCollection.find(query).toArray();
+        res.send(result);
+      } else {
+        const query = {};
+        const result = await categoryCollection.find(query).toArray();
+        res.send(result);
+        console.log(result);
+      }
     });
-  }
-});
+
+    // ===============================
+
+    app.get("/category/filter/v2", async (req, res) => {
+      const param = req.query;
+      if (
+        !param.brfFilter &&
+        !param.frIntFilter &&
+        !param.freeAirFilter &&
+        !param.airConFilter &&
+        !param.fitness &&
+        !param.pool
+      ) {
+        const data = await categoryCollection.find({}).toArray();
+        return res.send(data);
+      } else {
+        let filterQueries = [];
+        if (param.brfFilter) {
+          filterQueries = [
+            ...filterQueries,
+            {
+              freeBreakFast: "Free breakfast",
+            },
+          ];
+        }
+
+        if (param.frIntFilter) {
+          filterQueries = [
+            ...filterQueries,
+            {
+              freeInternet: "Free internet",
+            },
+          ];
+        }
+        if (param.freeAirFilter) {
+          filterQueries = [
+            ...filterQueries,
+            {
+              freeAirportShuttle: "Free airport shuttle",
+            },
+          ];
+        }
+
+        if (param.airConFilter) {
+          filterQueries = [
+            ...filterQueries,
+            {
+              airConditioned: "Air conditioned",
+            },
+          ];
+        }
+
+        if (param.fitness) {
+          filterQueries = [
+            ...filterQueries,
+            {
+              fitness: "Fitness",
+            },
+          ];
+        }
+
+        if (param.pool) {
+          filterQueries = [
+            ...filterQueries,
+            {
+              pool: "Pool",
+            },
+          ];
+        }
+
+        const filterData = await categoryCollection
+          .find({ $or: filterQueries })
+          .toArray();
+        return res.send(filterData);
+      }
+    });
+
+    // ==========================================find hotel=============================
+
+    app.get("/category/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const booking = await categoryCollection.findOne(query);
+      res.send(booking);
+    });
+
+    app.get("/category/search/getHotelBySearch", async (req, res) => {
+      try {
+        const city = req.query.city;
+        const price = parseInt(req.query.price);
+        const room = parseInt(req.query.room);
+        const guests = parseInt(req.query.guests);
+
+        const hotels = await categoryCollection
+          .find({
+            $and: [
+              city ? { city } : {},
+              price ? { price: { $lte: price } } : {},
+              room ? { room: { $gte: room } } : {},
+              guests ? { guests: { $gte: guests } } : {},
+            ],
+          })
+          .toArray();
+
+        res.status(200).json({
+          success: true,
+          message: "Successful",
+          data: hotels,
+        });
+      } catch (err) {
+        res.status(404).json({
+          success: false,
+          message: "not found",
+        });
+      }
+    });
+
+    // ================= booking data =================
+
+    app.post("/bookings", async (req, res) => {
+      const booking = req.body;
+      console.log(booking);
+      const result = await bookingsCollection.insertOne(booking);
+      res.send(result);
+    });
 
 
+    app.get("/bookingInfo/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const bookedPackage = await bookingsCollection.findOne(query);
+      res.send(bookedPackage);
+      console.log(bookedPackage);
+    });
 
-
-
-
-
-
-
-
-
-
+    app.get("/bookinginfo", async (req, res) => {
+      const query = {};
+      const result = await bookingsCollection.find(query).toArray();
+      res.send(result);
+    });
 
 
   } finally {
