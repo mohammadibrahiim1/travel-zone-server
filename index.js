@@ -210,18 +210,18 @@ async function run() {
     app.post("/payments", async (req, res) => {
       const payment = req.body;
       const result = await paymentCollection.insertOne(payment);
-      // const id = payment.bookingId;
-      // const filter = { _id: new ObjectId(id) };
-      // const updatedDocument = {
-      //   $set: {
-      //     paid: true,
-      //     transactionId: payment.transactionId,
-      //   },
-      // };
-      // const updatedResult = await bookingsCollection.updateOne(
-      //   filter,
-      //   updatedDocument
-      // );
+      const id = payment.bookingId;
+      const filter = { _id: new ObjectId(id) };
+      const updatedDocument = {
+        $set: {
+          paid: true,
+          transactionId: payment.transactionId,
+        },
+      };
+      const updatedResult = await bookingsCollection.updateOne(
+        filter,
+        updatedDocument
+      );
       // res.send();
       res.send(result);
 
@@ -386,6 +386,13 @@ async function run() {
       const bookedPackage = await bookingsCollection.findOne(query);
       res.send(bookedPackage);
       console.log(bookedPackage);
+    });
+
+    app.delete("/bookings/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const result = await bookingsCollection.deleteOne(query);
+      res.send(result);
     });
   } finally {
   }
