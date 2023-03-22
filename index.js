@@ -37,7 +37,9 @@ app.use("/api", ApiRouter);
 async function run() {
   const placesCollection = DB.client.db("travel-agency").collection("places");
   const reviewsCollection = DB.client.db("travel-agency").collection("reviews");
-  const bookingsCollection = DB.client.db('travel-agency').collection('bookings');
+  const bookingsCollection = DB.client
+    .db("travel-agency")
+    .collection("bookings");
 
   const tourGuideCollection = DB.client
     .db("travel-agency")
@@ -187,7 +189,7 @@ async function run() {
 
     app.post("/create-payment-intent", async (req, res) => {
       const data = req.body;
-      const price = data.price;
+      const price = data.totalPrice;
       const amount = price * 100;
 
       // Create a PaymentIntent with the order amount and currency
@@ -222,19 +224,6 @@ async function run() {
       // );
       // res.send();
       res.send(result);
-
-      // get flight details  by id
-
-      // app.get("/api/flights/:id", async (req, res) => {
-      //   const id = req.params.id;
-      //   const query = { _id: new ObjectId(id) };
-      //   const selectedFlight = await flightsCollection.findOne(query);
-      //   res.send(selectedFlight);
-      //   // console.log(selectedPackage);
-      // });
-
-      // flight controller
-      app.get("/flights", FlightController.show);
 
       // ================
     });
@@ -385,22 +374,19 @@ async function run() {
       res.send(result);
     });
 
+    app.get("/bookings", async (req, res) => {
+      const query = {};
+      const result = await bookingsCollection.find(query).toArray();
+      res.send(result);
+    });
 
-    app.get("/bookingInfo/:id", async (req, res) => {
+    app.get("/bookings/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) };
       const bookedPackage = await bookingsCollection.findOne(query);
       res.send(bookedPackage);
       console.log(bookedPackage);
     });
-
-    app.get("/bookinginfo", async (req, res) => {
-      const query = {};
-      const result = await bookingsCollection.find(query).toArray();
-      res.send(result);
-    });
-
-
   } finally {
   }
 }
