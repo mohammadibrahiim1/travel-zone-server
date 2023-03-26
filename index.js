@@ -37,6 +37,15 @@ app.use("/api", ApiRouter);
 async function run() {
   const placesCollection = DB.client.db("travel-agency").collection("places");
   const reviewsCollection = DB.client.db("travel-agency").collection("reviews");
+  const favouritesHotelCollection = DB.client
+    .db("travel-agency")
+    .collection("favouritesHotel");
+  const favouritesFlightsCollection = DB.client
+    .db("travel-agency")
+    .collection("favouritesFlights");
+  const favouritesCollection = DB.client
+    .db("travel-agency")
+    .collection("favourites");
   const bookingsCollection = DB.client
     .db("travel-agency")
     .collection("bookings");
@@ -369,8 +378,45 @@ async function run() {
 
     app.post("/bookings", async (req, res) => {
       const booking = req.body;
-      console.log(booking);
+
       const result = await bookingsCollection.insertOne(booking);
+      res.send(result);
+    });
+    app.post("/favourites", async (req, res) => {
+      const favourites = req.body;
+      const result = await favouritesCollection.insertOne(favourites);
+      res.send(result);
+    });
+    app.post("/favouritesHotel", async (req, res) => {
+      const favouritesHotel = req.body;
+      const result = await favouritesHotelCollection.insertOne(favouritesHotel);
+      res.send(result);
+    });
+    app.post("/favouritesFlight", async (req, res) => {
+      const favouritesFlight = req.body;
+      const result = await favouritesFlightsCollection.insertOne(
+        favouritesFlight
+      );
+      res.send(result);
+    });
+
+    app.get("/favourites", async (req, res) => {
+      const query = {};
+      const result = await favouritesCollection.find(query).toArray();
+      res.send(result);
+    });
+
+    app.get("/favouritesHotel", async (req, res) => {
+      const query = {};
+      const result = await favouritesHotelCollection.find(query).toArray();
+      res.send(result);
+    });
+
+    app.get("/favouritesFlight", async (req, res) => {
+      const favouritesFlight = req.body;
+      const result = await favouritesFlightsCollection
+        .find(favouritesFlight)
+        .toArray();
       res.send(result);
     });
 
@@ -394,6 +440,16 @@ async function run() {
       const result = await bookingsCollection.deleteOne(query);
       res.send(result);
     });
+    
+
+    app.delete("/favouritesHotel/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const result = await favouritesHotelCollection.deleteOne(query);
+      res.send(result);
+    });
+
+    // app.delete()
   } finally {
   }
 }
