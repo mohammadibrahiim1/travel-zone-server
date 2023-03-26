@@ -406,6 +406,19 @@ async function run() {
       res.send(result);
     });
 
+    app.delete("/favourites/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: id };
+      const result = await favouritesCollection.deleteOne(query);
+      res.send(result);
+    });
+    // app.get("/favourites/:id", async (req, res) => {
+    //   const id = req.params.id;
+    //   const query = { _id: id };
+    //   const result = await favouritesCollection.findOne(query);
+    //   res.send(result);
+    // });
+
     app.get("/favouritesHotel", async (req, res) => {
       const query = {};
       const result = await favouritesHotelCollection.find(query).toArray();
@@ -440,16 +453,24 @@ async function run() {
       const result = await bookingsCollection.deleteOne(query);
       res.send(result);
     });
-    
+
+    // app.delete("/favouritesHotel/:id", async (req, res) => {
+    //   const id = req.params.id;
+    //   const query = { _id: new ObjectId(id) };
+    //   const result = await favouritesHotelCollection.deleteOne(query);
+    //   res.send(result);
+    // });
 
     app.delete("/favouritesHotel/:id", async (req, res) => {
       const id = req.params.id;
-      const query = { _id: new ObjectId(id) };
+      const query = { _id: id };
       const result = await favouritesHotelCollection.deleteOne(query);
       res.send(result);
     });
 
-    // app.delete()
+
+
+    
   } finally {
   }
 }
