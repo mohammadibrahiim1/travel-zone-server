@@ -59,6 +59,7 @@ async function run() {
   const paymentCollection = DB.client
     .db("travel-agency")
     .collection("payments");
+  const usersCollection = DB.client.db("travel-agency").collection("users");
   // const flightsCollection = DB.client.db("travel-agency").collection("flights");
   // const hotelsCollection = DB.client.db()
   try {
@@ -468,9 +469,42 @@ async function run() {
       res.send(result);
     });
 
+    app.post("/users", async (req, res) => {
+      const users = req.body;
+      const result = await usersCollection.insertOne(users);
+      res.send(result);
+    });
+    app.get("/users", async (req, res) => {
+      const query = {};
+      const result = await usersCollection.find(query).toArray();
+      res.send(result);
+    });
 
+    app.get("/users/admin/:email", async (req, res) => {
+      const email = req.params.email;
+      const query = { email};
+      const user = await usersCollection.findOne(query);
+      res.send({ isAdmin: user?.role === "admin" });
+    });
 
-    
+    // =============make an user admin ================
+
+    app.put("/users/admin/:id", async (req, res) => {
+      const id = req.params.id;
+      const filter = { _id: new ObjectId(id) };
+      const options = { upsert: true };
+      const updatedDoc = {
+        $set: {
+          role: "admin",
+        },
+      };
+      const result = await usersCollection.updateOne(
+        filter,
+        updatedDoc,
+        options
+      );
+      res.send(result);
+    });
   } finally {
   }
 }
