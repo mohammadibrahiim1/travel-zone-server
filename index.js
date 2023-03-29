@@ -434,10 +434,25 @@ async function run() {
       res.send(result);
     });
 
+    app.delete("/favouritesFlight/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: id };
+      const result = await favouritesFlightsCollection.deleteOne(query);
+      res.send(result);
+    });
+
     app.get("/bookings", async (req, res) => {
       const query = {};
       const result = await bookingsCollection.find(query).toArray();
       res.send(result);
+    });
+
+    app.get("/bookings", async (req, res) => {
+      const email = req.query.email;
+      const query = { email: email };
+      const userBookings = bookingsCollection.find(query).toArray();
+      res.send(userBookings);
+      console.log(userBookings);
     });
 
     app.get("/bookings/:id", async (req, res) => {
@@ -479,7 +494,6 @@ async function run() {
       const result = await usersCollection.find(query).toArray();
       res.send(result);
     });
-    
 
     app.get("/users/admin/:email", async (req, res) => {
       const email = req.params.email;
@@ -500,6 +514,25 @@ async function run() {
         },
       };
       const result = await usersCollection.updateOne(
+        filter,
+        updatedDoc,
+        options
+      );
+      res.send(result);
+    });
+
+    // update date on database
+
+    app.get("/addDate", async (req, res) => {
+      const filter = {};
+      const options = { upsert: true };
+      const updatedDoc = {
+        $set: {
+          CheckIn: "03/29/2023",
+          checkOUt: "04/29/2023",
+        },
+      };
+      const result = await categoryCollection.updateMany(
         filter,
         updatedDoc,
         options
