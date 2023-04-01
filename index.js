@@ -447,13 +447,18 @@ async function run() {
       res.send(result);
     });
 
-    app.get("/bookings", async (req, res) => {
+    app.get("/bookings/v2", async (req, res) => {
       const email = req.query.email;
       const query = { email: email };
-      const userBookings = bookingsCollection.find(query).toArray();
+      const userBookings = await bookingsCollection
+        .find(query)
+        .sort({ _id: -1 })
+        .toArray();
       res.send(userBookings);
       console.log(userBookings);
     });
+
+    
 
     app.get("/bookings/:id", async (req, res) => {
       const id = req.params.id;
@@ -461,6 +466,13 @@ async function run() {
       const bookedPackage = await bookingsCollection.findOne(query);
       res.send(bookedPackage);
       console.log(bookedPackage);
+    });
+
+    app.get("/bookings/email/:email", async (req, res) => {
+      const email = req.params.email;
+      const query = { email: email };
+      const loginUserBooked = await bookingsCollection.findOne(query);
+      res.send(loginUserBooked);
     });
 
     app.delete("/bookings/:id", async (req, res) => {
