@@ -32,7 +32,7 @@ app.use("/api", ApiRouter);
 // });
 
 async function run() {
-  // line 37 to line 62 are collections of data in database. here "travel-agency is the client  name and "collection("") is the name of data.example: "travel-agency" = db-name and "places" = dataName.
+  // here is the  collections of data in database. here "travel-agency is the client  name and "collection("") is the name of data.example: "travel-agency" = db-name and "places" = dataName.
   const placesCollection = DB.client.db("travel-agency").collection("places");
   const reviewsCollection = DB.client.db("travel-agency").collection("reviews");
   const favouritesHotelCollection = DB.client
@@ -520,7 +520,7 @@ async function run() {
       const result = await usersCollection.insertOne(users);
       res.send(result);
     });
-    
+
     app.get("/users", async (req, res) => {
       const query = {};
       const result = await usersCollection.find(query).toArray();
