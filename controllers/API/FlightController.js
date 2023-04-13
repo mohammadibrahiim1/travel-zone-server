@@ -41,6 +41,7 @@ const timeCal = (departure, arrival) => {
 
 const updateInfo = async () => {
   const allFlights = await flights.find({}).toArray();
+  // here is the code for get all flights
   try {
     allFlights.map((item) => {
       const tripTime = timeCal(item.time.departure, item.time.arrival);
@@ -78,6 +79,7 @@ exports.index = async (req, res) => {
   res.send(result);
 };
 exports.show = async (req, res) => {
+  // here is the code for filter flights data by price, cheapest rate,trip, airlines name, destination,location.
   const init = throttle(updateInfo);
   init();
   let filter = [];
@@ -154,6 +156,7 @@ exports.show = async (req, res) => {
 
 exports.showByID = async (req, res, next) => {
   try {
+    // here is the code for get flights data by id
     const ID = req.params.ID;
     const result = await flights.findOne({ _id: new ObjectId(ID) });
     const response = {
