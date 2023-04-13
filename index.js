@@ -513,13 +513,14 @@ async function run() {
     });
 
 
-
+// here is the code for save user data when a user log in or signup and get user data to display. 
 
     app.post("/users", async (req, res) => {
       const users = req.body;
       const result = await usersCollection.insertOne(users);
       res.send(result);
     });
+    
     app.get("/users", async (req, res) => {
       const query = {};
       const result = await usersCollection.find(query).toArray();
