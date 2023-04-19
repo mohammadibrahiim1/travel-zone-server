@@ -1,0 +1,496 @@
+{
+  "code": 200,
+  "message": "Successful",
+  "cities": [
+    {
+      "id": 1,
+      "name": "Dhaka",
+      "image": "https://cdn-shebadev.s3.ap-south-1.amazonaws.com/sheba_xyz/jpg/dhaka.jpg",
+      "center": {
+        "lat": 23.788994076131,
+        "lng": 90.410852011945
+      },
+      "locations": [
+        {
+          "id": 1,
+          "city_id": 1,
+          "name": "Mohammadpur",
+          "center": {
+            "lat": 23.765181318668,
+            "lng": 90.357595
+          }
+        },
+        {
+          "id": 2,
+          "city_id": 1,
+          "name": "Farmgate",
+          "center": {
+            "lat": 23.75655,
+            "lng": 90.387215
+          }
+        },
+        {
+          "id": 3,
+          "city_id": 1,
+          "name": "Dhanmondi",
+          "center": {
+            "lat": 23.740765185361,
+            "lng": 90.371251122684
+          }
+        },
+        {
+          "id": 4,
+          "city_id": 1,
+          "name": "Gulshan",
+          "center": {
+            "lat": 23.788099544655,
+            "lng": 90.412001016086
+          }
+        },
+        {
+          "id": 5,
+          "city_id": 1,
+          "name": "Mirpur",
+          "center": {
+            "lat": 23.814796533619,
+            "lng": 90.362453658608
+          }
+        },
+        {
+          "id": 6,
+          "city_id": 1,
+          "name": "Motijheel",
+          "center": {
+            "lat": 23.735523654455,
+            "lng": 90.418698170408
+          }
+        },
+        {
+          "id": 7,
+          "city_id": 1,
+          "name": "Uttara",
+          "center": {
+            "lat": 23.864875801165,
+            "lng": 90.377921836233
+          }
+        },
+        {
+          "id": 8,
+          "city_id": 1,
+          "name": "Malibag",
+          "center": {
+            "lat": 23.745705,
+            "lng": 90.41451
+          }
+        },
+        {
+          "id": 9,
+          "city_id": 1,
+          "name": "Banani ",
+          "center": {
+            "lat": 23.79228047513,
+            "lng": 90.405715294182
+          }
+        },
+        {
+          "id": 11,
+          "city_id": 1,
+          "name": "Mirpur DOHS",
+          "center": {
+            "lat": 23.838647790682,
+            "lng": 90.368693768978
+          }
+        },
+        {
+          "id": 12,
+          "city_id": 1,
+          "name": "Mohakhali DOHS",
+          "center": {
+            "lat": 23.78108299941,
+            "lng": 90.395481034393
+          }
+        },
+        {
+          "id": 13,
+          "city_id": 1,
+          "name": "Baridhara DOHS",
+          "center": {
+            "lat": 23.81263,
+            "lng": 90.413355
+          }
+        },
+        {
+          "id": 15,
+          "city_id": 1,
+          "name": "Bashundhara R/A",
+          "center": {
+            "lat": 23.822148706625,
+            "lng": 90.45567167638
+          }
+        },
+        {
+          "id": 17,
+          "city_id": 1,
+          "name": "Khilkhet",
+          "center": {
+            "lat": 23.831340110168,
+            "lng": 90.426432931213
+          }
+        },
+        {
+          "id": 18,
+          "city_id": 1,
+          "name": "Nikunjo",
+          "center": {
+            "lat": 23.832533272401,
+            "lng": 90.41664
+          }
+        },
+        {
+          "id": 20,
+          "city_id": 1,
+          "name": "Badda",
+          "center": {
+            "lat": 23.786347040464,
+            "lng": 90.430788070431
+          }
+        },
+        {
+          "id": 21,
+          "city_id": 1,
+          "name": "Banani DOHS",
+          "center": {
+            "lat": 23.79409,
+            "lng": 90.39876
+          }
+        },
+        {
+          "id": 22,
+          "city_id": 1,
+          "name": "Baridhara",
+          "center": {
+            "lat": 23.80169,
+            "lng": 90.421405
+          }
+        },
+        {
+          "id": 23,
+          "city_id": 1,
+          "name": "Bashabo",
+          "center": {
+            "lat": 23.742285,
+            "lng": 90.430759431877
+          }
+        },
+        {
+          "id": 24,
+          "city_id": 1,
+          "name": "Jatrabari",
+          "center": {
+            "lat": 23.71165,
+            "lng": 90.43389
+          }
+        },
+        {
+          "id": 25,
+          "city_id": 1,
+          "name": "Kakrail",
+          "center": {
+            "lat": 23.738345,
+            "lng": 90.407135
+          }
+        },
+        {
+          "id": 26,
+          "city_id": 1,
+          "name": "Kafrul",
+          "center": {
+            "lat": 23.790956012592,
+            "lng": 90.391135
+          }
+        },
+        {
+          "id": 29,
+          "city_id": 1,
+          "name": "Khilgaon",
+          "center": {
+            "lat": 23.752350958063,
+            "lng": 90.450325
+          }
+        },
+        {
+          "id": 31,
+          "city_id": 1,
+          "name": "Mogbazar",
+          "center": {
+            "lat": 23.754008071259,
+            "lng": 90.409585627995
+          }
+        },
+        {
+          "id": 32,
+          "city_id": 1,
+          "name": "Mohakhali",
+          "center": {
+            "lat": 23.7783,
+            "lng": 90.404795431214
+          }
+        },
+        {
+          "id": 33,
+          "city_id": 1,
+          "name": "Rampura",
+          "center": {
+            "lat": 23.76290404747,
+            "lng": 90.421060437417
+          }
+        },
+        {
+          "id": 34,
+          "city_id": 1,
+          "name": "Shahbag",
+          "center": {
+            "lat": 23.740370178881,
+            "lng": 90.394190568123
+          }
+        },
+        {
+          "id": 35,
+          "city_id": 1,
+          "name": "Laxmibazar",
+          "center": {
+            "lat": 23.70983,
+            "lng": 90.41482
+          }
+        },
+        {
+          "id": 36,
+          "city_id": 1,
+          "name": "Wari",
+          "center": {
+            "lat": 23.718305,
+            "lng": 90.417855
+          }
+        },
+        {
+          "id": 40,
+          "city_id": 1,
+          "name": "Joydebpur",
+          "center": {
+            "lat": 23.991155510557,
+            "lng": 90.396561920643
+          }
+        },
+        {
+          "id": 41,
+          "city_id": 1,
+          "name": "Tongi",
+          "center": {
+            "lat": 23.928945656537,
+            "lng": 90.430912971496
+          }
+        },
+        {
+          "id": 108,
+          "city_id": 1,
+          "name": "Uttarkhan",
+          "center": {
+            "lat": 23.87879091008,
+            "lng": 90.436752536499
+          }
+        },
+        {
+          "id": 109,
+          "city_id": 1,
+          "name": "Sabujbagh",
+          "center": {
+            "lat": 23.728754087811,
+            "lng": 90.457916238963
+          }
+        },
+        {
+          "id": 114,
+          "city_id": 1,
+          "name": "Tejgaon",
+          "center": {
+            "lat": 23.763724675952,
+            "lng": 90.394427837549
+          }
+        },
+        {
+          "id": 115,
+          "city_id": 1,
+          "name": "Dakshinkhan",
+          "center": {
+            "lat": 23.845373272832,
+            "lng": 90.440855
+          }
+        },
+        {
+          "id": 116,
+          "city_id": 1,
+          "name": "Cantonment",
+          "center": {
+            "lat": 23.830987706482,
+            "lng": 90.39923959836
+          }
+        },
+        {
+          "id": 117,
+          "city_id": 1,
+          "name": "Ramna",
+          "center": {
+            "lat": 23.738067921636,
+            "lng": 90.400248968204
+          }
+        },
+        {
+          "id": 119,
+          "city_id": 1,
+          "name": "Old Town (Dhaka)",
+          "center": {
+            "lat": 23.707035,
+            "lng": 90.40565
+          }
+        },
+        {
+          "id": 124,
+          "city_id": 1,
+          "name": "Vatara",
+          "center": {
+            "lat": 23.787125,
+            "lng": 90.460935
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Chittagong",
+      "image": "https://cdn-shebadev.s3.ap-south-1.amazonaws.com/sheba_xyz/jpg/chittagong.jpg",
+      "center": {
+        "lat": 22.355855752226,
+        "lng": 91.856254920898
+      },
+      "locations": [
+        {
+          "id": 120,
+          "city_id": 2,
+          "name": "Nasirabad",
+          "center": {
+            "lat": 22.362954216518,
+            "lng": 91.819090800104
+          }
+        },
+        {
+          "id": 121,
+          "city_id": 2,
+          "name": "Sugandha",
+          "center": {
+            "lat": 22.364014020545,
+            "lng": 91.82933
+          }
+        },
+        {
+          "id": 142,
+          "city_id": 2,
+          "name": "Bayejid bostami",
+          "center": {
+            "lat": 22.392686092842,
+            "lng": 91.804163083434
+          }
+        },
+        {
+          "id": 143,
+          "city_id": 2,
+          "name": "Chadgaon",
+          "center": {
+            "lat": 22.371752340437,
+            "lng": 91.863384246826
+          }
+        },
+        {
+          "id": 144,
+          "city_id": 2,
+          "name": "Pachlaish",
+          "center": {
+            "lat": 22.371683894741,
+            "lng": 91.830383499618
+          }
+        },
+        {
+          "id": 145,
+          "city_id": 2,
+          "name": "Pahartali",
+          "center": {
+            "lat": 22.360879144627,
+            "lng": 91.775775924325
+          }
+        },
+        {
+          "id": 146,
+          "city_id": 2,
+          "name": "Khulshi",
+          "center": {
+            "lat": 22.357643192363,
+            "lng": 91.796103715896
+          }
+        },
+        {
+          "id": 147,
+          "city_id": 2,
+          "name": "Kotwali (Chittagong)",
+          "center": {
+            "lat": 22.331868879907,
+            "lng": 91.829455643892
+          }
+        },
+        {
+          "id": 148,
+          "city_id": 2,
+          "name": "Bakalia",
+          "center": {
+            "lat": 22.338070629232,
+            "lng": 91.857858896255
+          }
+        },
+        {
+          "id": 149,
+          "city_id": 2,
+          "name": "Halishahar",
+          "center": {
+            "lat": 22.322909360059,
+            "lng": 91.785600185394
+          }
+        },
+        {
+          "id": 150,
+          "city_id": 2,
+          "name": "Double Mooring",
+          "center": {
+            "lat": 22.320971856777,
+            "lng": 91.799671053886
+          }
+        },
+        {
+          "id": 151,
+          "city_id": 2,
+          "name": "Bandar",
+          "center": {
+            "lat": 22.28834134654,
+            "lng": 91.784377098083
+          }
+        },
+        {
+          "id": 152,
+          "city_id": 2,
+          "name": "Patenga",
+          "center": {
+            "lat": 22.25779829989,
+            "lng": 91.799869537354
+          }
+        }
+      ]
+    }
+  ]
+}
