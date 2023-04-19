@@ -58,6 +58,9 @@ async function run() {
     .db("travel-agency")
     .collection("payments");
   const usersCollection = DB.client.db("travel-agency").collection("users");
+  const rentCarServicesCollection = DB.client
+    .db("travel-agency")
+    .collection("rent-car-services");
   // const flightsCollection = DB.client.db("travel-agency").collection("flights");
   // const hotelsCollection = DB.client.db()
   try {
@@ -512,8 +515,7 @@ async function run() {
       res.send(result);
     });
 
-
-// here is the code for save user data when a user log in or signup and get user data to display. 
+    // here is the code for save user data when a user log in or signup and get user data to display.
 
     app.post("/users", async (req, res) => {
       const users = req.body;
@@ -526,8 +528,6 @@ async function run() {
       const result = await usersCollection.find(query).toArray();
       res.send(result);
     });
-
-
 
     // here is the code for get admin
 
@@ -554,6 +554,14 @@ async function run() {
         updatedDoc,
         options
       );
+      res.send(result);
+    });
+
+    //============ rent-car-services ==============
+
+    app.get("/rent-car-services", async (req, res) => {
+      const query = {};
+      const result = await rentCarServicesCollection.find(query).toArray();
       res.send(result);
     });
 
