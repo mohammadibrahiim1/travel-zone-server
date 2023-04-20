@@ -640,11 +640,11 @@ async function run() {
       // roundFilter,
       if (
         !param.insideCityFilter &&
-        !param.outSideCityFilter &&
-        !param.halfDayFilter &&
-        !param.allDayFilter &&
-        !param.oneWayFilter &&
-        !param.roundFilter
+        !param.outSideCityFilter
+        // !param.halfDayFilter &&
+        // !param.allDayFilter &&
+        // !param.oneWayFilter &&
+        // !param.roundFilter
       ) {
         const data = await rentCarServicesCollection.find({}).toArray();
         return res.send(data);
@@ -654,7 +654,7 @@ async function run() {
           filterQueries = [
             ...filterQueries,
             {
-              city_location: "inside-city",
+              city_location: "Inside City",
             },
           ];
         }
@@ -662,44 +662,44 @@ async function run() {
           filterQueries = [
             ...filterQueries,
             {
-              city_location: "outside-city",
-            },
-          ];
-        }
-       
-        if (param.allDayFilter) {
-          filterQueries = [
-            ...filterQueries,
-            {
-              duration: "all-day",
-            },
-          ];
-        }
-        if (param.halfDayFilter) {
-          filterQueries = [
-            ...filterQueries,
-            {
-              duration: "half-day",
+              city_location: "Outside City",
             },
           ];
         }
 
-        if (param.oneWayFilter) {
-          filterQueries = [
-            ...filterQueries,
-            {
-              trip: "one-way",
-            },
-          ];
-        }
-        if (param.roundFilter) {
-          filterQueries = [
-            ...filterQueries,
-            {
-              trip: "round",
-            },
-          ];
-        }
+        // if (param.allDayFilter) {
+        //   filterQueries = [
+        //     ...filterQueries,
+        //     {
+        //       duration: "All Day",
+        //     },
+        //   ];
+        // }
+        // if (param.halfDayFilter) {
+        //   filterQueries = [
+        //     ...filterQueries,
+        //     {
+        //       duration: "Half Day",
+        //     },
+        //   ];
+        // }
+
+        // if (param.oneWayFilter) {
+        //   filterQueries = [
+        //     ...filterQueries,
+        //     {
+        //       trip: "One Way",
+        //     },
+        //   ];
+        // }
+        // if (param.roundFilter) {
+        //   filterQueries = [
+        //     ...filterQueries,
+        //     {
+        //       trip: "Round",
+        //     },
+        //   ];
+        // }
         const filterData = await rentCarServicesCollection
           .find({
             $or: filterQueries,
