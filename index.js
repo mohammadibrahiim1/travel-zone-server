@@ -60,7 +60,7 @@ async function run() {
   const usersCollection = DB.client.db("travel-agency").collection("users");
   const rentCarServicesCollection = DB.client
     .db("travel-agency")
-    .collection("rent-car-services");
+    .collection("carServices");
   // const flightsCollection = DB.client.db("travel-agency").collection("flights");
   // const hotelsCollection = DB.client.db()
   try {
@@ -559,10 +559,154 @@ async function run() {
 
     //============ rent-car-services ==============
 
-    app.get("/rent-car-services", async (req, res) => {
-      const query = {};
-      const result = await rentCarServicesCollection.find(query).toArray();
-      res.send(result);
+    // app.get("/rent-car-services", async (req, res) => {
+    //   const query = {};
+    //   const result = await rentCarServicesCollection.find(query).toArray();
+    //   res.send(result);
+    // });
+
+    // rent car service filter  data
+
+    // app.get("/packages", async (req, res) => {
+    //   const param = req.query;
+    //   if (
+    //     !param.intFilter &&
+    //     !param.dmsFilter &&
+    //     !param.tpFilter &&
+    //     !param.twpFilter &&
+    //     !param.thrFilter
+    //   ) {
+    //     const data = await packagesCollection.find({}).toArray();
+    //     return res.send(data);
+    //   } else {
+    //     let filterQueries = [];
+    //     if (param.intFilter) {
+    //       filterQueries = [
+    //         ...filterQueries,
+    //         {
+    //           tourCategory: "International",
+    //         },
+    //       ];
+    //     }
+    //     if (param.dmsFilter) {
+    //       filterQueries = [
+    //         ...filterQueries,
+    //         {
+    //           tourCategory: "Domestic",
+    //         },
+    //       ];
+    //     }
+    //     if (param.tpFilter) {
+    //       filterQueries = [
+    //         ...filterQueries,
+    //         {
+    //           offer: "10% discount",
+    //         },
+    //       ];
+    //     }
+    //     if (param.twpFilter) {
+    //       filterQueries = [
+    //         ...filterQueries,
+    //         {
+    //           offer: "20% discount",
+    //         },
+    //       ];
+    //     }
+    //     if (param.thrFilter) {
+    //       filterQueries = [
+    //         ...filterQueries,
+    //         {
+    //           offer: "30% discount",
+    //         },
+    //       ];
+    //     }
+    //     const filterData = await packagesCollection
+    //       .find({
+    //         $or: filterQueries,
+    //       })
+    //       .toArray();
+    //     return res.send(filterData);
+    //   }
+    // });
+
+    app.get("/carServices", async (req, res) => {
+      const param = req.query;
+
+      // insideCityFilter,
+      // outSideCityFilter,
+      // halfDayFilter,
+      // allDayFilter,
+      // oneWayFilter,
+      // roundFilter,
+      if (
+        !param.insideCityFilter &&
+        !param.outSideCityFilter &&
+        !param.halfDayFilter &&
+        !param.allDayFilter &&
+        !param.oneWayFilter &&
+        !param.roundFilter
+      ) {
+        const data = await rentCarServicesCollection.find({}).toArray();
+        return res.send(data);
+      } else {
+        let filterQueries = [];
+        if (param.insideCityFilter) {
+          filterQueries = [
+            ...filterQueries,
+            {
+              city_location: "inside-city",
+            },
+          ];
+        }
+        if (param.outSideCityFilter) {
+          filterQueries = [
+            ...filterQueries,
+            {
+              city_location: "outside-city",
+            },
+          ];
+        }
+       
+        if (param.allDayFilter) {
+          filterQueries = [
+            ...filterQueries,
+            {
+              duration: "all-day",
+            },
+          ];
+        }
+        if (param.halfDayFilter) {
+          filterQueries = [
+            ...filterQueries,
+            {
+              duration: "half-day",
+            },
+          ];
+        }
+
+        if (param.oneWayFilter) {
+          filterQueries = [
+            ...filterQueries,
+            {
+              trip: "one-way",
+            },
+          ];
+        }
+        if (param.roundFilter) {
+          filterQueries = [
+            ...filterQueries,
+            {
+              trip: "round",
+            },
+          ];
+        }
+        const filterData = await rentCarServicesCollection
+          .find({
+            $or: filterQueries,
+          })
+          .toArray();
+        return res.send(filterData);
+      }
     });
 
     // update date on database
