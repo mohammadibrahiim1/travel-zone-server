@@ -61,6 +61,12 @@ async function run() {
   const rentCarServicesCollection = DB.client
     .db("travel-agency")
     .collection("carServices");
+  const carTimeSlotsCollection = DB.client
+    .db("travel-agency")
+    .collection("car-time-slots");
+  const pickupLocationCollection = DB.client
+    .db("travel-agency")
+    .collection("pickup-location");
   // const flightsCollection = DB.client.db("travel-agency").collection("flights");
   // const hotelsCollection = DB.client.db()
   try {
@@ -559,76 +565,6 @@ async function run() {
 
     //============ rent-car-services ==============
 
-    // app.get("/rent-car-services", async (req, res) => {
-    //   const query = {};
-    //   const result = await rentCarServicesCollection.find(query).toArray();
-    //   res.send(result);
-    // });
-
-    // rent car service filter  data
-
-    // app.get("/packages", async (req, res) => {
-    //   const param = req.query;
-    //   if (
-    //     !param.intFilter &&
-    //     !param.dmsFilter &&
-    //     !param.tpFilter &&
-    //     !param.twpFilter &&
-    //     !param.thrFilter
-    //   ) {
-    //     const data = await packagesCollection.find({}).toArray();
-    //     return res.send(data);
-    //   } else {
-    //     let filterQueries = [];
-    //     if (param.intFilter) {
-    //       filterQueries = [
-    //         ...filterQueries,
-    //         {
-    //           tourCategory: "International",
-    //         },
-    //       ];
-    //     }
-    //     if (param.dmsFilter) {
-    //       filterQueries = [
-    //         ...filterQueries,
-    //         {
-    //           tourCategory: "Domestic",
-    //         },
-    //       ];
-    //     }
-    //     if (param.tpFilter) {
-    //       filterQueries = [
-    //         ...filterQueries,
-    //         {
-    //           offer: "10% discount",
-    //         },
-    //       ];
-    //     }
-    //     if (param.twpFilter) {
-    //       filterQueries = [
-    //         ...filterQueries,
-    //         {
-    //           offer: "20% discount",
-    //         },
-    //       ];
-    //     }
-    //     if (param.thrFilter) {
-    //       filterQueries = [
-    //         ...filterQueries,
-    //         {
-    //           offer: "30% discount",
-    //         },
-    //       ];
-    //     }
-    //     const filterData = await packagesCollection
-    //       .find({
-    //         $or: filterQueries,
-    //       })
-    //       .toArray();
-    //     return res.send(filterData);
-    //   }
-    // });
-
     app.get("/carServices", async (req, res) => {
       const param = req.query;
 
@@ -707,6 +643,32 @@ async function run() {
           .toArray();
         return res.send(filterData);
       }
+    });
+
+    app.get("/carServices/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const bookedPackage = await rentCarServicesCollection.findOne(query);
+      res.send(bookedPackage);
+      console.log(bookedPackage);
+    });
+
+    // app.get("/bookings", async (req, res) => {
+    //   const query = {};
+    //   const result = await bookingsCollection.find(query).toArray();
+    //   res.send(result);
+    // });
+
+    app.get("/carTimeSlots", async (req, res) => {
+      const query = {};
+      const result = await carTimeSlotsCollection.find(query).toArray();
+      res.send(result);
+    });
+
+    app.get("/pickupLocation", async (req, res) => {
+      const query = {};
+      const result = await pickupLocationCollection.find(query).toArray();
+      res.send(result);
     });
 
     // update date on database
