@@ -76,7 +76,7 @@ async function run() {
     // console.log(hotelPlaceCollection);
     const categoryCollection = DB.client
       .db("travel-agency")
-      .collection("category");
+      .collection("hotels");
     app.get("/places", async (req, res) => {
       const query = {};
       const places = await placesCollection.find(query).toArray();
@@ -104,7 +104,6 @@ async function run() {
     });
 
     // you can get the tour guide data from database by this code
-
     app.get("/tourGuide", async (req, res) => {
       const query = {};
       const tourGuide = await tourGuideCollection.find(query).toArray();
